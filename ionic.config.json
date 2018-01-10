@@ -1,0 +1,8 @@
+{
+  "name": "maisfutevolei",
+  "app_id": "47629e77",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
