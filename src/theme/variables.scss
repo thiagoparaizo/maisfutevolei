@@ -13,6 +13,7 @@ $app-direction: ltr;
 
 
 @import "ionic.globals";
+@import "ionic.theme.default";
 
 
 // Shared Variables
@@ -38,7 +39,16 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  stable:      #f8f8f8,
+  positive:      #488aff,
+  calm:                  #40A7CF,
+  balanced:              #a2c57a,
+  energized:             #f0b840,
+  assertive:             #ef4e3a,
+  royal:                 #8a6de9,
+  twitter:    #55acee
+
 );
 
 
@@ -52,7 +62,77 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+// Material Design only Sass variables can go here
 
+// Change #000 to any color to see the md text color change
+$text-md-color:                          color($colors, twitter);
+
+// Use the primary color as the background for the toolbar-md-background
+$toolbar-md-background:                   color($colors, light);//OK - cor toolbar dos títulos
+// nada $tabbar-md-background:                    #8f8;
+// nada $tab-button-md-active-color:              color($colors, primary);
+// nada $tab-button-md-inactive-color:            #8c8c8c;
+
+$toolbar-title-color: #000; 
+$toolbar-title-md-color: #000;
+// Use the default background for the tabbar since it inherits from toolbar
+$tabs-md-background:                      #333; //OK cor background da tab
+$tab-button: color($colors, twitter);
+
+// Change the color of the tabs text
+$tabs-md-tab-color-active:                color($colors, positive);//OK - cor texto tabs active
+$tabs-md-tab-color-inactive:              color($colors, danger);//OK - cor texto tabs inactive
+$tabs-md-tab-icon-color-active: pink; //OK cor do icone active
+// nada $tabs-md-tab-icon-color-inactive: yellow; //OK cor do icone active
+// Change the color of the segment button text
+// nada $toolbar-md-active-color:                 color($colors, danger);
+// nada $toolbar-md-inactive-color:               color($colors, positive);
+//$segment-button-md-text-color-activated:  rgb(228, 231, 12);
+
+
+
+.tabbar a[aria-selected=true] {
+  border-top: 5px;
+  border-style: solid;  
+  background-color: #32db64  
+}
+
+
+
+.custom {
+  background-color: #3f4041 !important; /* This sets the background color*/
+ }
+ 
+/*Set the background to transparent for ion-item*/
+.custom .item {
+  background-color: transparent;
+  border:none;   /*Removes all borders*/
+  border-top: 1px solid;   /*Top Border for each menu item*/
+  border-bottom:2px solid;   /*Bottom border for each menu item*/
+  border-color: #666;   /*Sets colors for top and bottom border*/
+  color: white;    /*Text color for each item*/
+}
+ 
+/*Changes the border for the last item*/
+.custom .item:last-child {
+  border-bottom: 1px solid #666;
+}
+ 
+.custom .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+ 
+/*Just makes the type white*/
+.custom h2,
+.custom h3,
+.custom p,
+.custom a {
+  color: white;  /*Text color for each item, overrides the color property above*/
+}
+
+.scroll-content {
+  //background-color: #32db64
+}
 
 
 
