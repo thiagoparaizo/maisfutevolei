@@ -1,0 +1,31 @@
+{
+    "uid": "J405pilf34WTK46xreEUu54uR9z1",
+    "displayName": null,
+    "photoURL": null,
+    "email": "thiagoparaizo@gmail.com",
+    "emailVerified": false,
+    "phoneNumber": null,
+    "isAnonymous": false,
+    "providerData": [
+        {
+            "uid": "thiagoparaizo@gmail.com",
+            "displayName": null,
+            "photoURL": null,
+            "email": "thiagoparaizo@gmail.com",
+            "phoneNumber": null,
+            "providerId": "password"
+        }
+    ],
+    "apiKey": "AIzaSyBW8Ej7cXMKXIUB3xyWS1gn9FpN072fpys",
+    "appName": "[DEFAULT]",
+    "authDomain": "maisfutevolei.firebaseapp.com",
+    "stsTokenManager": {
+        "apiKey": "AIzaSyBW8Ej7cXMKXIUB3xyWS1gn9FpN072fpys",
+        "refreshToken": "AEoYo8uyKPSnlhzPN2-t_g4vpQ6GxsxRMaZxbgRWiFsoXBIKa9pgPyB1bJeObo_Y6xeDnTRe5youeuiujgBbrq-oDnizOE-Xrq9YcTxuZ2ra6ZI8K9ckPUAiXP_OTgecX7W0rscFAYoDY9lzZBAR91yhznCFSgDwvpd4UPUuy7hLe_JQqRoc8zzhb1y2OjHIPWh6xVSKSkPXh5E5R-4TRsQGUH29NvF0MQ",
+        "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3ZTJmNWZjMzE4ZDYxMmU0MDQ5Nzc2ZWQ2Y2FlNGY0NTY2OWZiZTcifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWFpc2Z1dGV2b2xlaSIsImF1ZCI6Im1haXNmdXRldm9sZWkiLCJhdXRoX3RpbWUiOjE1MTQ2NzEzODUsInVzZXJfaWQiOiJKNDA1cGlsZjM0V1RLNDZ4cmVFVXU1NHVSOXoxIiwic3ViIjoiSjQwNXBpbGYzNFdUSzQ2eHJlRVV1NTR1Ujl6MSIsImlhdCI6MTUxNDY3MTM4NSwiZXhwIjoxNTE0Njc0OTg1LCJlbWFpbCI6InRoaWFnb3BhcmFpem9AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInRoaWFnb3BhcmFpem9AZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.dPOLYU4OyJWbBt-wYFZ6dyI1JKDBn_6b79t-dDvvqIqwxf-zeA49ae7rD_aXeQRxuaTUgACli_AxxHOUOun90nI38SY0ODvkEFCuwtHhTTOxaWyN4GfXFVjsrO7nXBq3a4SjDxVI7ug-YN9LUWPoCyg7AUxddsFOQ7BIXcDztZj0-HdIUb4K1wpqfLArbWhdsWq8-cwoz8BfkruOiQJCXqLevQH1HZ2-S6QyRL0MH31ArwcraC8pI8_b_rR4GcNI9-MmfnblgoNVKeE990sX6M77Coue7HMq2frN5IZWh1PhaTUKgbiP7Wbifh5kOjP8y89VYwRiAPnrELyaCFmjSQ",
+        "expirationTime": 1514674985018
+    },
+    "redirectEventId": null,
+    "lastLoginAt": "1514671311000",
+    "createdAt": "1514518811000"
+}

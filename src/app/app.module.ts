@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { GooglePlus } from '@ionic-native/google-plus'
 import { MyApp } from './app.component';
 import { BuscaPage } from '../pages/busca/busca';
 import { FavoritosPage } from '../pages/favoritos/favoritos';
@@ -13,9 +14,22 @@ import { InformaEsDeUsoPage } from '../pages/informa-es-de-uso/informa-es-de-uso
 import { LoginPage } from '../pages/login/login';
 import { CadastroUsuarioPage } from '../pages/cadastro-usuario/cadastro-usuario';
 
-
+//Provider
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { UtilProvider } from '../providers/util';
+import { AuthProvider } from '../providers/auth';
+import { ConfiguracaoProvider } from '../providers/configuracao';
+import { QuadraRachaProvider } from '../providers/quadra-racha';
+
+//Firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { environment } from '../environments/environment';
+//Storage
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -33,7 +47,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,6 +71,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    UtilProvider,
+    AuthProvider,
+    ConfiguracaoProvider,
+    QuadraRachaProvider,
+    GooglePlus,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

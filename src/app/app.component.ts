@@ -1,3 +1,7 @@
+import { MyApp } from './app.component';
+import { TabsPage } from './../../src (cópia)/pages/tabs/tabs';
+import { styleapp } from './../environments/styleapp';
+
 import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -11,6 +15,7 @@ import { InformaEsDeUsoPage } from '../pages/informa-es-de-uso/informa-es-de-uso
 
 
 import { HomeTabPage } from '../pages/home-tab/home-tab';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -19,7 +24,19 @@ import { HomeTabPage } from '../pages/home-tab/home-tab';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = HomeTabPage ; 
+    rootPage:any; 
+
+    //login
+    static userProfile:any = localStorage.getItem('userProfile');
+    static tokenUsuario = localStorage.getItem('userToken');
+
+
+    //thema
+    menuPrincipalLogo = '';
+    classeMenuPrincipal = '';
+    classeItensmenuPrincipal = 'itens-menu-principal-verde';
+    public styleClass: any;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -27,8 +44,66 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+
+      //TODO validar
+      if('verde'=='verde'){
+        this.styleClass = styleapp.style_verde;        
+      }
+      
+      this.menuPrincipalLogo = this.styleClass.logoMenuPrincial;
+      this.classeMenuPrincipal = this.styleClass.classeMenuPrincipal;
+      //this.classeItensmenuPrincipal = this.styleClass.classeItensmenuPrincipal;
+
+      this.verificarTokenUsuario();
+
     });
   }
+
+  verificarTokenUsuario(){
+
+    console.log('token:' + MyApp.tokenUsuario);
+    console.log('token cahce:' + localStorage.getItem('userToken'));
+
+    if(MyApp.tokenUsuario==null && localStorage.getItem('userToken')==null){
+      console.log('Usuario deslogado...');
+      this.rootPage = LoginPage;
+    }else{
+      console.log('Usuario logado...');
+      if(!MyApp.userProfile){
+        console.log('MyApp.user == null');
+        MyApp.userProfile=JSON.parse(localStorage.getItem('userProfile'));
+      }
+
+      this.rootPage = HomeTabPage;
+    }
+  }
+
+  static setUser(user: any) {
+    console.log('set user ---> '+ JSON.stringify(user));
+    
+    this.tokenUsuario = user.uid;
+    this.userProfile = JSON.stringify(user);
+
+    //console.log('1-'+user.displayName);
+    //console.log('2-'+this.user.displayName);
+    
+
+    localStorage.setItem('userProfile', JSON.stringify(this.userProfile)); 
+    localStorage.setItem('userToken', JSON.stringify(this.tokenUsuario)); 
+    console.log('setando token e usuário...');
+    
+  }
+
+  static clearUser() {
+    try {
+      localStorage.removeItem('userProfile');
+      console.log('removendo userProfile da sessão.')
+    } catch (error) {
+      console.log('erro ao remover userProfile da sessão.')
+    }
+  }
+
+
   goToHomeTab(params){
     if (!params) params = {};
     this.navCtrl.setRoot(HomeTabPage);

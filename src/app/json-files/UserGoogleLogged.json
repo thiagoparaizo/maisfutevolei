@@ -1,0 +1,31 @@
+{
+    "uid": "bwh3nL4dbFOzmeF3vVKX6EoWzT42",
+    "displayName": "Home Paraizo",
+    "photoURL": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+    "email": "homeparaizo@gmail.com",
+    "emailVerified": true,
+    "phoneNumber": null,
+    "isAnonymous": false,
+    "providerData": [
+        {
+            "uid": "114011470767619222314",
+            "displayName": "Home Paraizo",
+            "photoURL": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+            "email": "homeparaizo@gmail.com",
+            "phoneNumber": null,
+            "providerId": "google.com"
+        }
+    ],
+    "apiKey": "AIzaSyBW8Ej7cXMKXIUB3xyWS1gn9FpN072fpys",
+    "appName": "[DEFAULT]",
+    "authDomain": "maisfutevolei.firebaseapp.com",
+    "stsTokenManager": {
+        "apiKey": "AIzaSyBW8Ej7cXMKXIUB3xyWS1gn9FpN072fpys",
+        "refreshToken": "AEoYo8uhjbnsxczQkEal4SjRahyxIQnUOL0-6pdsg1yvLHzTmvxxqx5O6QLysgF7Es98Z511R4hnHP33PWM4JXr1iib3gY6_F0tya2qL68Fad69dh-HlrJL6wByXskK9Nem1LA7ToZSrvla2wjW9uV8ZqmzMSWpH-yirnFH86BFTVFcp4T3k-BrdU8j9uSjEPfcQ-lGXPLHHmOf3CpQ3iYjXfEQccuaMGBTtOQxcOo1qvux7U1umgV8Sl8ypLorcrbOHx01ufno97gPN39D0CLUvRtMrQAUWJfG6OjVPpg-kt4qbsbAs2D4f8KDBtHHR6CWAvzciNer2cWtid2oICZHXODo6p4UIUmoxOTO7VBtsVF6pD9tdhz4",
+        "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3ZTJmNWZjMzE4ZDYxMmU0MDQ5Nzc2ZWQ2Y2FlNGY0NTY2OWZiZTcifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWFpc2Z1dGV2b2xlaSIsIm5hbWUiOiJIb21lIFBhcmFpem8iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tLy1YZFVJcWRNa0NXQS9BQUFBQUFBQUFBSS9BQUFBQUFBQUFBQS80MjUycnNjYnY1TS9waG90by5qcGciLCJhdWQiOiJtYWlzZnV0ZXZvbGVpIiwiYXV0aF90aW1lIjoxNTE0NjczOTY3LCJ1c2VyX2lkIjoiYndoM25MNGRiRk96bWVGM3ZWS1g2RW9XelQ0MiIsInN1YiI6ImJ3aDNuTDRkYkZPem1lRjN2VktYNkVvV3pUNDIiLCJpYXQiOjE1MTQ2NzM5NjcsImV4cCI6MTUxNDY3NzU2NywiZW1haWwiOiJob21lcGFyYWl6b0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExNDAxMTQ3MDc2NzYxOTIyMjMxNCJdLCJlbWFpbCI6WyJob21lcGFyYWl6b0BnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.Wlc6hEnzMSuHuz5WSrwzU04DFq5oDETeiBl-BiANz7jy17Ss93pDqtZworZ7K6A7EGoDupiFWfslTM8NNL1NTAnK1QvAduYXzjsMhZvMueMG8xQ4RkfkYGqJg0f3UgaTPfCL5LIakDxmJ3sImZ-XyL8nLX3AGzHE-MEiLvSmB3AdM55NXFmA4UUltD5DVmPd1jT-UCj6h4sjPqd5S6Q9BcKX66_GiMAs0nj_RTKfHwK10twtAdnRAW5IQTqlpA4NuIh0gJt9IEAJmRiIsMC6bgMMqRl99XUtGuNkNKZGsz3cPa5_gI43-nxsGZhL1d0ecpIc8dATDIO_U_60LPPCQw",
+        "expirationTime": 1514677567406
+    },
+    "redirectEventId": null,
+    "lastLoginAt": "1514673967000",
+    "createdAt": "1514673967000"
+}

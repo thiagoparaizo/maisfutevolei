@@ -13,4 +13,49 @@
 //
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+// a'utomatically applied to the <body> element in the app.
+
+
+.card-md h2{//Texto card menu principal
+  color: #ffffff; 
+  font-weight: bold
+}
+
+// tema VERDE
+.itens-menu-principal-verde{
+    border-bottom-color: color($colors, cinza);
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
+    color: #ffffff;
+  }
+
+  .menu-principal-verde{
+    background-color: color($colors, cinza);
+    
+  }
+
+  // tema AMARELO
+.itens-menu-principal-amarelo{
+  border-bottom-color: color($colors, cinza);
+  border-bottom-width: 8px;
+  border-bottom-style: solid;
+  color: #ffffff;
+}
+
+.menu-principal-amarelo{
+  background-color: color($colors, cinza);
+  
+}
+
+// tema DARK
+.itens-menu-principal-dark{
+  border-bottom-color: color($colors, cinza);
+  border-bottom-width: 8px;
+  border-bottom-style: solid;
+  color: #ffffff;
+}
+
+.menu-principal-dark{
+  background-color: color($colors, cinza);
+  
+}

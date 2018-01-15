@@ -1,0 +1,31 @@
+{
+    "uid": "jowOVMe6f5N0GJ6p92ONxLlh2ld2",
+    "displayName": "Maria Lucia Paraizo",
+    "photoURL": "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/13087805_1729035037310881_8044295521797169487_n.jpg?oh=7c8b514d956b89a17952a61b926ea3e7&oe=5ABDB138",
+    "email": "luciaparaizo@gmail.com",
+    "emailVerified": false,
+    "phoneNumber": null,
+    "isAnonymous": false,
+    "providerData": [
+        {
+            "uid": "2008349362712779",
+            "displayName": "Maria Lucia Paraizo",
+            "photoURL": "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/13087805_1729035037310881_8044295521797169487_n.jpg?oh=7c8b514d956b89a17952a61b926ea3e7&oe=5ABDB138",
+            "email": "luciaparaizo@gmail.com",
+            "phoneNumber": null,
+            "providerId": "facebook.com"
+        }
+    ],
+    "apiKey": "AIzaSyBW8Ej7cXMKXIUB3xyWS1gn9FpN072fpys",
+    "appName": "[DEFAULT]",
+    "authDomain": "maisfutevolei.firebaseapp.com",
+    "stsTokenManager": {
+        "apiKey": "AIzaSyBW8Ej7cXMKXIUB3xyWS1gn9FpN072fpys",
+        "refreshToken": "AEoYo8uyFF9D2LsYnJXFmG2e7vgcjBkqUUyet9xNLSdCz4R2F5_oLBqve7xJTfkaU48BrIJDaRNK-wFiOO4dIrcUHRJMHpEZEdlay2f-Qn7yfXgrnfmE9C1YAa1aiBXrv7poQv5GH7mjrcmKseo1ODEc8Inr1tYwX384NmNHCWiVRZ3vEnTNsNwLWg_ZLUBF5YwSu1WiPF2w33ihG8UVIGqtXWqcpbQyCLPcB3rnXyG5-64i9UWvrai3uGmxbNpmWYoK_oEbdvFf56pKW3xO3qg7kmKNPXNMeYMbz2-0DbKUMQCAFrCS5ux_tS6SRmWuNpLhrvTHVtbGZtHmx-oyXu6UB73ZZiylV4GaAAFKiM6EO6gG9cbTfZbKBWtWv8A_mu45U5GmcxNaBjcBdfPwS2HE8ihQuIyun2Pn5-tihlQJGSI8DBWqUWRnzhEh9Qq9NUEfNPHS9hLM",
+        "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ3ZTJmNWZjMzE4ZDYxMmU0MDQ5Nzc2ZWQ2Y2FlNGY0NTY2OWZiZTcifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWFpc2Z1dGV2b2xlaSIsIm5hbWUiOiJNYXJpYSBMdWNpYSBQYXJhaXpvIiwicGljdHVyZSI6Imh0dHBzOi8vc2NvbnRlbnQueHguZmJjZG4ubmV0L3YvdDEuMC0xL3AxMDB4MTAwLzEzMDg3ODA1XzE3MjkwMzUwMzczMTA4ODFfODA0NDI5NTUyMTc5NzE2OTQ4N19uLmpwZz9vaD03YzhiNTE0ZDk1NmI4OWExNzk1MmE2MWI5MjZlYTNlNyZvZT01QUJEQjEzOCIsImF1ZCI6Im1haXNmdXRldm9sZWkiLCJhdXRoX3RpbWUiOjE1MTQ2ODEyNjIsInVzZXJfaWQiOiJqb3dPVk1lNmY1TjBHSjZwOTJPTnhMbGgybGQyIiwic3ViIjoiam93T1ZNZTZmNU4wR0o2cDkyT054TGxoMmxkMiIsImlhdCI6MTUxNDY4MTI2MiwiZXhwIjoxNTE0Njg0ODYyLCJlbWFpbCI6Imx1Y2lhcGFyYWl6b0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZmFjZWJvb2suY29tIjpbIjIwMDgzNDkzNjI3MTI3NzkiXSwiZW1haWwiOlsibHVjaWFwYXJhaXpvQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6ImZhY2Vib29rLmNvbSJ9fQ.JO3k2du5F8MhZnvBJnUqApdkH9VmGixY3KqSXuVewFFASEF1OzDtlFP6lkfTAms3-MJonb94Ck2l5EAx_tOiAm-OCTSu81kiu2SldI_8HEzhQkMPfEQD3cIU49mweGxH1ISQeMy9WLmxkOY13vE79OYdVQqA44KXZzQcf33q1rGnqxdFFR2LirpCxxG7DratX_t4m-FExAYN0oTCq8807SB9V67PyBJ99ys33MyBgNlYltBZeYSuAp1xHuOkC59w_v-rgXIl91c789jDmCBS6_oMpvjwoaS4wYSWNOpW_LoYK7lapxw9vEFBMeglMQJaPbGsEKyCDTfxZmUbY4m1NQ",
+        "expirationTime": 1514684863549
+    },
+    "redirectEventId": null,
+    "lastLoginAt": "1514681262000",
+    "createdAt": "1514677212000"
+}

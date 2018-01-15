@@ -1,0 +1,378 @@
+{
+    
+    "curtidas":[
+        {
+            "id_curtida":"",
+            "tipo_curtida":"",
+            "id_relacionamento":"",
+            "id_usuario":"",
+            "data":"",
+            "avaliacao":0,
+            "depoimento":""
+        }
+    ],
+
+    "avaliacoes":[
+        {
+            "id_avaliacao":"",
+            "tipo_avaliacao":"",
+            "id_relacionamento":"",
+            "id_usuario":"",
+            "data":"",
+            "avaliacao":0,
+            "depoimento":""
+        }
+    ],
+
+    "denuncias":[
+        {
+            "id_denuncia":"",
+            "tipo_denuncia":"",
+            "id_relacionamento":"",
+            "id_usuario":"",
+            "data":"",
+            "depoimento":""
+        }
+    ],
+
+    "alertas":[
+        {
+            "id":"",
+            "tipo_alerta":"quadra",
+            "id_relacionamento":"",
+            "data_inclusao":"",
+            "titulo":"",
+            "conteudo":"",
+            "transmitido_sucesso":false,
+            "data_transmissao":""
+        }
+    ],
+    "perfils":{
+        "jogador":"jogador",
+        "atleta":"atleta",
+        "professor":"professor",
+        "anunciante":"anunciante",
+        "patrocinador":"patrocinador",
+        "contribuidor":"contribuidor",
+        "administrador":"administrador"
+    },
+
+    "select_acesso_quadra":{
+        "publico":"ACESSO PUBLICO",
+        "particular":"ACESSO PRIVADO",
+        "aluguel":"ALUGUEL",
+        "misto":"ACESSO MISTO",
+        "aposta":"SOMENTE APOSTAS",
+        "eventos":"SOMENTE PARA EVENTOS",
+        "treino":"SOMENTE PARA TREINO",
+        "aulas":"SOMENTE PARA AULAS"
+    },
+
+    "select_acesso_racha":{
+        "aberto":"ABERTO",
+        "particular":"RACHA FECHADO (PARTICULAR)",
+        "aluguel":"RACHA FECHADO (ALUGUEL)",
+        "aposta":"SOMENTE APOSTAS",
+        "treino":"SOMENTE PARA TREINO",
+        "aulas":"SOMENTE PARA AULAS"
+    },
+    
+    "select_ilumincao":{
+        "sem_ilum":"SEM ILUMINAÇÃO",
+        "pouca_ilum":"POUCA ILUMINAÇÃO",
+        "regular_ilum":"ILUMINAÇÃO REGULAR",
+        "media_ilum":"ILUMINAÇÃO BOA",
+        "muito_boa_ilum":"ILUMINAÇÃO MUITO BOA",
+        "excelente_ilum":"ILUMINAÇÃO EXCELENTE"
+    },
+
+    "select_vento":{
+        "sem_v":"SEM VENTO",
+        "pouco_v":"POUCO VENTO",
+        "moderado_v":"VENTO MODERADO",
+        "muito_v":"MUITO VENTO",
+        "forte_v":"VENTO FORTE"
+    },
+
+    "select_areia":{
+        "areia_ruim":"RUIM",
+        "areia_regular":"REGULAR",
+        "areia_boa":"BOA",
+        "areia_muito_boa":"MUITO BOA",
+        "areia_excelente":"EXCELENTE"
+    },
+
+    "select_nivel":{
+        "misto": "Nível Misto (Todo mundo joga)",
+        "iniciante": "Iniciantes (Galera começando)",
+        "medio": "Médio (Já dá pra brincar)",
+        "alto": "Nível Alto (Vários ralis)",
+        "altissimo": "Nível Altíssimo (Só profissional)",
+        "aposta": "Nível Aposta (Joga quem tem $$$)"
+
+    },
+
+    "quadras":{
+        "AC":[{}],
+        "AL":[{}],	 
+        "AP":[{}],	 
+        "AM":[{}],
+        "BA":[{}],
+        "CE":[{
+            "id_unico":"",
+            "nome":"",
+            "apelido":"",
+            "status_ativa":true,
+            "acesso":"select_acesso",
+            "cidade":"",
+
+            "endereco":{
+                "logradouro":"",
+                "numero":0,
+                "bairro":"",
+                "cidade":"",
+                "cep":"",
+                "cordenadas_gps":""
+            },
+
+            "propriedades":{
+                "nome_resp":"",
+                "id_resp":"",
+                "contato_resp":"",
+                "email_resp":"",
+                "data_inclusao":"",
+                "criador":"",
+                "ultima_atualizacao":"",
+                "descricao":""
+            },
+
+            "caracteristicas":{
+                "acesso":"select_acesso_quadra",
+                "acessibilidade":false,
+                "possui_rede":true,
+                "possui_marcacao":true,
+                "iluminacao":"select_ilumincao",
+                "possui_bola":false,
+                "vento":"select_vento",
+                "areia":"select_areia",
+                "praia":true,
+                "banheiro":true,
+                "familiar":true,
+                "local_para_banho":true,
+                "hidratacao":true,
+                "alimentacao":true,
+                "estaionamento":false
+
+            },
+
+            "favoritos":[{
+                "id_usuario":""
+            }]
+
+        }],
+        "DF":[{}],
+        "ES":[{}],
+        "GO":[{}],
+        "MA":[{}],
+        "MT":[{}],
+        "MS":[{}],
+        "MG":[{}],
+        "PA":[{}],
+        "PB":[{}],
+        "PR":[{}],
+        "PE":[{}],
+        "PI":[{}],
+        "RJ":[{}],
+        "RN":[{}],
+        "RS":[{}],
+        "RO":[{}],
+        "RR":[{}],
+        "SC":[{}],
+        "SP":[{}],
+        "SE":[{}],
+        "TO":[{}]
+    },
+
+    "rachas":{
+        "AC":[{}],
+        "AL":[{}],	 
+        "AP":[{}],	 
+        "AM":[{}],
+        "BA":[{}],
+        "CE":[{
+            "id_unico":"",
+            "id_quadra":"",
+            "nome":"",
+            "apelido":"",
+            "status_ativa":true,
+            "acesso":"select_acesso",
+            "dia_horario":[
+                {
+                    "dia_semana":"",
+                    "horario":""
+                },
+                {
+                    "dia_semana":"",
+                    "horario":""
+                }
+            ],
+            "nivel":"select_nivel",
+
+            "propriedades":{
+                "nome_resp":"",
+                "id_resp":"",
+                "contato_resp":"",
+                "email_resp":"",
+                "data_inclusao":"",
+                "criador":"",
+                "ultima_atualizacao":"",
+                "descricao":""
+            },
+
+            "caracteristicas":{
+                "acesso":"select_acesso_racha",
+                "visitantes":true,
+                "banheiro":true,
+                "familiar":true,
+                "local_para_banho":true,
+                "hidratacao":true,
+                "alimentacao":true,
+                "estaionamento":false
+
+            },
+
+            "favoritos":[{
+                "id_usuario":""
+            }],
+            
+            "participante":[{
+                "id_usuario":""
+            }]
+
+        }],
+        "DF":[{}],
+        "ES":[{}],
+        "GO":[{}],
+        "MA":[{}],
+        "MT":[{}],
+        "MS":[{}],
+        "MG":[{}],
+        "PA":[{}],
+        "PB":[{}],
+        "PR":[{}],
+        "PE":[{}],
+        "PI":[{}],
+        "RJ":[{}],
+        "RN":[{}],
+        "RS":[{}],
+        "RO":[{}],
+        "RR":[{}],
+        "SC":[{}],
+        "SP":[{}],
+        "SE":[{}],
+        "TO":[{}]
+    },
+    
+    "usuarios":{
+        "id_unico_usuario":{
+            
+            "dados_pessoais":{
+                "uid":"id_unico_usuario",
+                "nome":"Thiago",
+                "sobrenome":"Paraizo",
+                "apelido":"Thiaguinho",
+                "data_nascimento":"17/01/1986",
+                "perfil":"jogador",
+                "inicio_pratica":"10/2013",
+                "e-mail":"thiagoparaizo@gmail.com",
+                "telefone":"85981516682"
+            },
+            
+            "endereco":{
+                "logradouro":"Rua Joaquim Martins 398",
+                "complemento":"apto 202 bl 3",
+                "bairro":"Passaré",
+                "cidade":"Fortaleza",
+                "estado":"CE",
+                "pais":"Brasil"
+            },
+
+            "habilidades":{
+                "federado":false,
+                "nivel":"",
+                "altura":"",
+                "lado_na_quadra":"",
+                "pe":"",
+                "ataque":"",
+                "defesa":"",
+                "impulso":"",
+                "agilidade":"",
+                "movimentacao":"",
+                "folego":"",
+                "forca":"",
+                "leitura_de_jogo":"",
+                "desenvoltura_pe_direito":"",
+                "desenvoltura_pe_esquerdo":"",
+                "desenvoltura_coxa":"",
+                "desenvoltura_chilena":"",
+                "desenvoltura_peito":"",
+                "desenvoltura_ombro":"",
+                "desenvoltura_cabeca":"",
+                "desenvoltura_shark":""
+            },
+            
+            "propriedades":{
+                "status_logado":true,
+                "status_ativo":true,
+                "ultimo_acesso":"",
+                "ultimo_login":"",
+                "notificacoes":true,
+                "alertas":true,
+                "mensagens":true,
+                "propagandas":true,
+                "premium":false,
+                "data_expiracao_premium":"",
+                "ultima_sincronizacao":"",
+                "permitido_enviar_alertas":true,
+                "permitido_enviar_mensagens":true
+
+            },
+
+            "favoritos":[{
+                "tipo":"quadra",
+                "id_relacionamento":"id_quadra_bm",
+                "notificacao":true,
+                "participante":false
+            },
+            {
+                "tipo":"racha",
+                "id_relacionamento":"id_racha_bm_noite",
+                "notificacao":true,
+                "participante":true
+            }
+        ],
+
+            "atividades":{
+                "aviso_presenca":[{
+                    "id_relacionamento":"",
+                    "data":"",
+                    "rodada":0
+                }],
+                "presenca_confirmada":[{
+                    "id_relacionamento":"",
+                    "data":"",
+                    "rodada":0
+                }],
+                "presenca_confirmada_foto":[{
+                    "id_relacionamento":"",
+                    "data":"",
+                    "rodada":0,
+                    "media":""
+                }]
+            }
+            
+        }
+
+    }
+
+}

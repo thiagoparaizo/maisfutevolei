@@ -8,41 +8,36 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page9">
-  <form id="login-form5">
-    <ion-list id="login-list3">
-      <ion-item id="login-input3">
+<ion-content padding id="page7">
+  <form id="login-form1">
+    <button ion-button block color="" (click)="loginUserFacebook()" *ngIf="!userProfile">
+      <ion-icon name="logo-facebook"></ion-icon>
+        Login com Facebook
+    </button>
+
+    <button ion-button block color="danger" (click)="loginUserGoogle()" *ngIf="!userProfile">
+      <ion-icon name="logo-googleplus"></ion-icon>
+         Login com Google
+    </button>
+    
+    <ion-list id="login-list2">
+      <ion-item id="login-input1">
         <ion-label>
           Email
         </ion-label>
-        <ion-input type="email" placeholder=""></ion-input>
+        <ion-input type="email" placeholder="" name="email" [(ngModel)]="user.email" #email="ngModel" required></ion-input>
       </ion-item>
-      <ion-item id="login-input4">
+      <ion-item id="login-input2">
         <ion-label>
           Password
         </ion-label>
-        <ion-input type="password" placeholder=""></ion-input>
+        <ion-input type="password" placeholder="" name="password" [(ngModel)]="user.password" #password="ngModel" required></ion-input>
       </ion-item>
     </ion-list>
     <div class="spacer" style="height:40px;" id="login-spacer1"></div>
-    <button id="login-button3" ion-button outline color="stable" block>
+    <button id="login-button1" ion-button color="stable" block on-click="loginEmail()">
       Log in
     </button>
-    <button id="login-button4" ion-button color="positive" block href-inappbrowser="/signup">
-      <ion-icon name="facebook"></ion-icon>
-      Facebook login
-    </button>
-    <button id="login-button5" ion-button color="assertive" block href-inappbrowser="/signup">
-      <ion-icon name="googleplus"></ion-icon>
-      Google login
-    </button>
+    
   </form>
-  <div id="login-markdown9" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      Some friendly
-      <strong>
-        markdown
-      </strong>
-    </p>
-  </div>
 </ion-content>

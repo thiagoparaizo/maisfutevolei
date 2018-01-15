@@ -1,16 +1,14 @@
 <ion-menu [content]="mainContent" style="background-color: transparent"><!-- TODO  cor da lasquinha do menu (direito)-->
   <button ion-button menuToggle="right">Toggle Right Menu</button>
   <ion-header no-border>
-    <ion-toolbar color = "white">
+    <ion-toolbar color = "cinza">
 
             <ion-title class="titletext" style="display:inline-block" > 
-               <div style = "width : 100%; height : 100%; background-color : white"> <!-- TODO  cor do fundo do header do menu-->
-                  <div style = "float:left;width:75%">
-                    <h3>+FUTEVOLÊI </h3>
+               <div style = "width : 100%; height : 100%; "> <!-- TODO  cor do fundo do header do menu-->
+                  <div style = "float:left;width:100%; margin-top: 15px">
+                    <img src = {{menuPrincipalLogo}} />
                   </div>
-                  <div style = "float:right;width:25%">
-                   <img src = "../assets/img/kYSHkeA5S6uDeuJ6tiTh_shark-3.jpg" />
-               </div>
+                  
                </div>
             </ion-title>
             <!--<img  src="assets/icon/Wemart_Icon.png" alt="logo"  height="40px" width = "40px" >  -->
@@ -18,45 +16,45 @@
     </ion-toolbar>
   </ion-header>
   
-  <ion-content id="side-menu21" style="background-color: transparent"><!-- TODO  cor do fundo do menu-->
+  <ion-content id="side-menu21" class="{{classeMenuPrincipal}}"><!-- TODO  cor do fundo do menu-->
     <ion-card id="Futevolei-card21" >
       <ion-list >
-        <ion-item color="royal" id="Futevolei-list-item3">
+        <ion-item color="dark" id="Futevolei-list-item3">
           <ion-avatar item-left>
             <img src="assets/img/IBEir5QlRRqiD7wNdhff_AnwpNbfCT5e0GIHGzkH8_perfil13.jpg" />
           </ion-avatar>
-          <h2>
-            Thiago Paaizo
+          <h2 >
+            Thiago Paraizo
           </h2>
         </ion-item>
         
-        <div color="twitter" style="width:100%;height:80px;margin:0px 0px;line-height:250px;background-color:#55acee;text-align:center;">
+        <div color="twitter" style="width:100%;height:80px;margin:0px 0px;line-height:250px;background-color:#09afaf;text-align:center;">
           <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
         </div>
         
-        <ion-item color="dark" menuClose="" on-click="goToHomeTab()" id="Futevolei-list-item7">
+        <ion-item color="verde" class="itens-menu-principal-verde" menuClose="" on-click="goToHomeTab()" id="Futevolei-list-item7"> 
           <ion-icon name="home" item-left></ion-icon>
           Home
           <ion-note item-right></ion-note>
           <ion-icon name="ionic" item-right></ion-icon>
         </ion-item>
-        <ion-item color="positive" menuClose="" on-click="goToMeuPerfil()" id="Futevolei-list-item8">
+        <ion-item color="verde" class="itens-menu-principal-verde" menuClose="" on-click="goToMeuPerfil()" id="Futevolei-list-item8">
           <ion-icon name="contact" item-left></ion-icon>
           Meu Perfil
         </ion-item>
-        <ion-item color="calm" menuClose="" on-click="goToVoce()" id="Futevolei-list-item26">
+        <ion-item color="verde" class="itens-menu-principal-verde" menuClose="" on-click="goToVoce()" id="Futevolei-list-item26">
           <ion-icon name="people" item-left></ion-icon>
           Contribuir
         </ion-item>
-        <ion-item color="balanced" menuClose="" on-click="goToContatoFutevolei()" id="Futevolei-list-item27">
-          <ion-icon name="whatsapp" item-left></ion-icon>
+        <ion-item color="verde" class="itens-menu-principal-verde" menuClose="" on-click="goToContatoFutevolei()" id="Futevolei-list-item27">
+          <ion-icon name="ionic" item-left></ion-icon>
           Contato
         </ion-item>
-        <ion-item color="energized" menuClose="" on-click="goToInformaEsDeUso()" id="Futevolei-list-item28">
+        <ion-item color="verde" class="itens-menu-principal" menuClose="" on-click="goToInformaEsDeUso()" id="Futevolei-list-item28">
           <ion-icon name="contact" item-left></ion-icon>
           Informações de Uso
         </ion-item>
-        <ion-item color="assertive" id="Futevolei-list-item29">
+        <ion-item color="verde_claro" id="Futevolei-list-item29">
           <ion-icon name="exit" item-left></ion-icon>
           Logout
           <ion-note item-right></ion-note>

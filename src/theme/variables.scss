@@ -47,7 +47,12 @@ $colors: (
   energized:             #f0b840,
   assertive:             #ef4e3a,
   royal:                 #8a6de9,
-  twitter:    #55acee
+  twitter:    #55acee,
+  cinza:  #333333,
+  cinza_claro:  #666666,
+  verde:  #008080,
+  verde_claro: #09afaf,
+  branco: #ffffff
 
 );
 
@@ -65,24 +70,24 @@ $colors: (
 // Material Design only Sass variables can go here
 
 // Change #000 to any color to see the md text color change
-$text-md-color:                          color($colors, twitter);
+$text-md-color:                          color($colors, danger);
 
 // Use the primary color as the background for the toolbar-md-background
-$toolbar-md-background:                   color($colors, light);//OK - cor toolbar dos títulos
+$toolbar-md-background:                   color($colors, verde);//OK - cor toolbar dos títulos ****
 // nada $tabbar-md-background:                    #8f8;
 // nada $tab-button-md-active-color:              color($colors, primary);
 // nada $tab-button-md-inactive-color:            #8c8c8c;
 
-$toolbar-title-color: #000; 
-$toolbar-title-md-color: #000;
+$toolbar-title-color: #fff; 
+$toolbar-title-md-color: #fff;
 // Use the default background for the tabbar since it inherits from toolbar
-$tabs-md-background:                      #333; //OK cor background da tab
+$tabs-md-background:                      color($colors, cinza); //OK cor background da tab ****
 $tab-button: color($colors, twitter);
 
 // Change the color of the tabs text
-$tabs-md-tab-color-active:                color($colors, positive);//OK - cor texto tabs active
-$tabs-md-tab-color-inactive:              color($colors, danger);//OK - cor texto tabs inactive
-$tabs-md-tab-icon-color-active: pink; //OK cor do icone active
+$tabs-md-tab-color-active:                color($colors, branco);//OK - cor texto tabs active
+$tabs-md-tab-color-inactive:              color($colors, branco);//OK - cor texto tabs inactive
+$tabs-md-tab-icon-color-active: #fff; //OK cor do icone active
 // nada $tabs-md-tab-icon-color-inactive: yellow; //OK cor do icone active
 // Change the color of the segment button text
 // nada $toolbar-md-active-color:                 color($colors, danger);
@@ -94,9 +99,8 @@ $tabs-md-tab-icon-color-active: pink; //OK cor do icone active
 .tabbar a[aria-selected=true] {
   border-top: 5px;
   border-style: solid;  
-  background-color: #32db64  
+  background-color: color($colors, cinza_claro);  
 }
-
 
 
 .custom {
@@ -129,11 +133,6 @@ $tabs-md-tab-icon-color-active: pink; //OK cor do icone active
 .custom a {
   color: white;  /*Text color for each item, overrides the color property above*/
 }
-
-.scroll-content {
-  //background-color: #32db64
-}
-
 
 
 // App Windows Variables
