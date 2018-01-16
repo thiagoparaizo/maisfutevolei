@@ -1,0 +1,9 @@
+
+
+Toast 
+>> ionic cordova plugin add cordova-plugin-x-toast
+>> npm install --save @ionic-native/toast
+
+> npm install angularfire2 --save
+> npm install firebase@4.8.0 --save
+> npm install @ionic-native/google-plus --save

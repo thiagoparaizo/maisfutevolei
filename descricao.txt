@@ -1,0 +1,43 @@
+component, directive, page, pipe, provider, tabs
+
+páginas:
+    - splash (logo animado app)
+    - instroducao(introduçaõ primeiro acesso)
+        introducao.css
+        introducao.html
+        introducao.ts
+
+    - login (login google, facebook, e-mail)
+        login.css
+        login.html
+        login.ts
+
+    - sigin (cadastro com e-mail e senha)
+        sigin.css
+        sigin.html
+        sigin.ts
+
+    - cadastro-usuario (cadastro inicial do usuário)
+        cadastro-usuario.css
+        cadastro-usuario.html
+        cadastro-usuario.ts
+    
+    - loading (página com imagem e loading entre operações de login/cadastro)
+        loading.css
+        loading.html
+        loading.ts
+
+    - incial-steps (introdução de uso - pós login)
+        incial-steps.css
+        incial-steps.html
+        incial-steps.ts
+
+providers:
+    - AuthProvider (serviços de login. logout, sigin, verificacao usuario, cadastro)
+    - UsuarioProvider (perfil, favoritos)
+    - QuadraRachaProvider (busca, listagem, detalhes, cadastro quadra, cadastro racha, avaliar, curtir)
+    - ConfiguracaoProvider (alertas favoritos, )
+    - UtilProvider (messagens, alertas, loagind, carregamentos menus)
+      
+    
+
