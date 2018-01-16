@@ -74,6 +74,17 @@ $text-md-color:                          color($colors, danger);
 
 // Use the primary color as the background for the toolbar-md-background
 $toolbar-md-background:                   color($colors, verde);//OK - cor toolbar dos títulos ****
+$toolbar-md-title-text-color:             color($colors, branco);//OK - cor do texto das toolbar 
+$toolbar-md-button-color:                 color($colors, cinza);//OK - cor dos icones das toolbar
+$toolbar-md-button-border-radius: 150px;
+//$toolbar-md-height: 50px;// OK
+
+//MENU
+$menu-md-background: red; //cor de fundo dos menus
+$background-md-color: color($colors, branco);//OK cor de fundo das páginas
+//$menu-md-box-shadow-color: green;
+//$menu-md-box-shadow: 30 20 100px $menu-md-box-shadow-color;
+
 // nada $tabbar-md-background:                    #8f8;
 // nada $tab-button-md-active-color:              color($colors, primary);
 // nada $tab-button-md-inactive-color:            #8c8c8c;

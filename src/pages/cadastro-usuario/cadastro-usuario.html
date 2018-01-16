@@ -9,7 +9,44 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page10">
-  <form id="cadastroUsuario-form6">
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" formControlName="nome" name="nome" text-uppercase></ion-input>
+
+    </ion-item>
+    <!--p [hidden]="myForm.controls.nome.valid" danger padding-left>Nome em branco</p-->
+    
+    <ion-item>
+      <ion-label floating>Apelido</ion-label>
+      <ion-textarea type="text" formControlName="apelido" name="apelido"></ion-textarea>
+    </ion-item>
+    <!--p [hidden]="myForm.controls.apelido.valid" danger padding-left>*requerido</p-->
+
+    <ion-item>
+      <ion-label floating>Aniversário:</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" min="1930-12-30" max="2018-01-01" 
+      monthNames="Janeiro, Fevereiro, Mar\u00e7o, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
+      formControlName="aniversario" name="aniversario"  ></ion-datetime>
+    </ion-item>
+    <!--p [hidden]="myForm.controls.apelido.valid" danger padding-left>*requerido</p-->
+
+    <ion-item>
+        <ion-label floating>Tempo de prátivo do Futevôlei: </ion-label>
+        <ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" 
+        monthNames="Janeiro, Fevereiro, Mar\u00e7o, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
+        formControlName="temo_pratica" name="temo_pratica" ></ion-datetime>
+      </ion-item>
+      <!--p [hidden]="myForm.controls.apelido.valid" danger padding-left>*requerido</p-->
+
+      <button ion-button center full color="cinza" [disabled]="!myForm.controls.nome.valid || !myForm.controls.apelido.valid">
+          OK
+      </button>
+      
+  </form>
+
+  <!--form id="cadastroUsuario-form6">
     <ion-card id="cadastroUsuario-card23">
       <ion-list>
         <ion-item color="none" id="cadastroUsuario-list-item37">
@@ -66,5 +103,5 @@
     <button id="cadastroUsuario-button6" ion-button color="balanced" block>
       Cadastrar
     </button>
-  </form>
+  </form-->
 </ion-content>

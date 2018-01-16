@@ -1,4 +1,4 @@
-import { MyApp } from './app.component';
+import { CadastroUsuarioPage } from './../pages/cadastro-usuario/cadastro-usuario';
 import { TabsPage } from './../../src (cópia)/pages/tabs/tabs';
 import { styleapp } from './../environments/styleapp';
 
@@ -29,7 +29,7 @@ export class MyApp {
     //login
     static userProfile:any = localStorage.getItem('userProfile');
     static tokenUsuario = localStorage.getItem('userToken');
-
+    logado = true; //TODO teste 
 
     //thema
     menuPrincipalLogo = '';
@@ -54,7 +54,9 @@ export class MyApp {
       this.classeMenuPrincipal = this.styleClass.classeMenuPrincipal;
       //this.classeItensmenuPrincipal = this.styleClass.classeItensmenuPrincipal;
 
-      this.verificarTokenUsuario();
+      //TODO mock 
+      //this.verificarTokenUsuario();
+      this.rootPage = CadastroUsuarioPage;
 
     });
   }
@@ -67,7 +69,9 @@ export class MyApp {
     if(MyApp.tokenUsuario==null && localStorage.getItem('userToken')==null){
       console.log('Usuario deslogado...');
       this.rootPage = LoginPage;
+      this.logado = false;
     }else{
+      this.logado = true;      
       console.log('Usuario logado...');
       if(!MyApp.userProfile){
         console.log('MyApp.user == null');
