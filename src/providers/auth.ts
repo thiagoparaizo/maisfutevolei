@@ -43,13 +43,30 @@ export class AuthProvider {
     return this.googlePlus.login({
       'webClientId': '723010978896-k3v3rjtp3on1itcde1knglj90f1v6s92.apps.googleusercontent.com',
       'offline': true
+    })  
+    .then(res => {
+      return this.angularFireAuth.auth.signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
+        .then((user: firebase.User) => {
+          console.log('update profile');
+          console.log('user--> '+JSON.stringify(user));
+          user.updateProfile({ displayName: res.displayName, photoURL: res.imageUrl });
+          return user;
+        });
     })
-      .then(res => {
-        return this.angularFireAuth.auth.signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.getIdToken))
-          .then((user: firebase.User) => {
-            return user.updateProfile({ displayName: res.displayName, photoURL: res.imageUrl })
-          });
-      })
+    
+    
+    //.then(res => {
+      //  const firecreds = firebase.auth.GoogleAuthProvider.credential(res.idToken);
+      //  console.log('firecreds: '+ firecreds);
+       // return this.angularFireAuth.auth.signInWithCredential(firecreds)
+        //  .then((user: firebase.User) => {
+         //   console.log('login token ok');
+          //  return user.updateProfile({ displayName: res.displayName, photoURL: res.imageUrl })
+          //})
+         // .catch(ns=>{
+          //  console.log('erro aqui' + ns);
+          //});
+      //})
       .catch((error: any) => {
         console.log('2erro: ' + error);
 
@@ -83,7 +100,7 @@ export class AuthProvider {
               })
           }
         } catch (error) {
-
+          console.log('erro logout:'+error)
         }
 
 

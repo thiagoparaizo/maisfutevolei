@@ -43,23 +43,33 @@ export class LoginPage {
   }
 
   loginUserGoogle(){
+    console.log('entrando com google');
     this.utilProvider.loaderIn('Logando...'); 
-     this.authProvider.loginWithGoogleAccountWeb()
+     this.authProvider.logginWithGoogle()
      .then((user:any)=>{
-       console.log('google login sucess!');
+      console.log('2 user--> '+JSON.stringify(user)); 
+      console.log('google login sucess! '+ user);
        this.utilProvider.loaderOut();
-       MyApp.setUser(user.user);
-       
-       //TODO
-       //this.navCtrl.setRoot(HomePage);
+       MyApp.setUser(user);
+      
+       if(this.authProvider.existeUsuario()){
+        this.utilProvider.showToast('Sucesso!', 3500, '');
+        console.log('....111');
+        this.navCtrl.setRoot(HomeTabPage);
+      }else{
+        this.utilProvider.showToast('Primeira vez por aqui. É necessário preencher algumas informações simples.', 3500, '');
+        console.log('....122');
+        this.navCtrl.setRoot(CadastroUsuarioPage);
+      }
+
      })
      .catch((error: any)=>{
-       console.log("1 error: "+ error);
+       console.log("12 error: "+ error);
      });
    }
  
    loginUserFacebook(){
-     
+     console.log('entrando com facebook');
      this.utilProvider.loaderIn('Logando...');
  
      this.authProvider.loginWithFacebookAccount()

@@ -57,7 +57,7 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-googleplus": {
-        "REVERSED_CLIENT_ID": "myreversedclientid"
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.723010978896-k3v3rjtp3on1itcde1knglj90f1v6s92"
       }
     },
     "platforms": [

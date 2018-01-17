@@ -1,3 +1,4 @@
+import { AuthProvider } from './../providers/auth';
 import { CadastroUsuarioPage } from './../pages/cadastro-usuario/cadastro-usuario';
 import { TabsPage } from './../../src (cópia)/pages/tabs/tabs';
 import { styleapp } from './../environments/styleapp';
@@ -38,7 +39,7 @@ export class MyApp {
     public styleClass: any;
 
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private authProvider:AuthProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -55,8 +56,8 @@ export class MyApp {
       //this.classeItensmenuPrincipal = this.styleClass.classeItensmenuPrincipal;
 
       //TODO mock 
-      //this.verificarTokenUsuario();
-      this.rootPage = CadastroUsuarioPage;
+      this.verificarTokenUsuario();
+      //this.rootPage = CadastroUsuarioPage;
 
     });
   }
@@ -128,4 +129,10 @@ export class MyApp {
     if (!params) params = {};
     this.navCtrl.setRoot(InformaEsDeUsoPage);
   }
+
+  logout(){
+    this.authProvider.sigOut();
+    this.navCtrl.setRoot(LoginPage);
+  }
+
 }
