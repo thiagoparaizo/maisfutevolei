@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HomeTabPage } from './../home-tab/home-tab';
 
@@ -13,8 +13,19 @@ export class CadastroUsuarioPage {
   myForm: FormGroup;
   private myData: any;
 
+  
+  ionViewWillEnter() {
+    this.menu.enable(false);
+    console.log('menu false');  
+  }
 
-  constructor(private navCtrl: NavController, private builder: FormBuilder) {
+    ionViewWillLeave() {
+      console.log('menu true');
+      this.menu.enable(true);
+    }
+
+
+  constructor(private navCtrl: NavController, private builder: FormBuilder, private menu: MenuController) {
     this.myForm = builder.group({
       'nome': ['', Validators.required],
       'apelido': ['', Validators.required],

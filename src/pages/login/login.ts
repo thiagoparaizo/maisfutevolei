@@ -4,7 +4,7 @@ import { CadastroUsuarioPage } from './../cadastro-usuario/cadastro-usuario';
 import { UserLogin } from './../../app/objetos/use-login';
 import { UtilProvider } from './../../providers/util';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth';
 import { MyApp } from '../../app/app.component';
 
@@ -14,11 +14,15 @@ import { MyApp } from '../../app/app.component';
 })
 export class LoginPage {
 
+  ionViewWillEnter() {
+    this.menu.enable(false);
+    console.log('menu false');  
+  }
+
   user:UserLogin = new UserLogin();
 
   constructor(public navCtrl: NavController,
-    private authProvider: AuthProvider, private utilProvider: UtilProvider
-  ) {
+    private authProvider: AuthProvider, private utilProvider: UtilProvider, private menu: MenuController) {
   }
   
   loginEmail(){

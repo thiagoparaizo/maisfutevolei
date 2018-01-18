@@ -87,16 +87,21 @@ export class AuthProvider {
 
   //sair todos os providers
   sigOut() {
+    console.log('a:'+ this.angularFireAuth.auth.currentUser);
+
     if (this.angularFireAuth.auth.currentUser.providerData.length) {
+      console.log('a2:'+ this.angularFireAuth.auth.currentUser.providerData.length);
       for (var i = 0; i < this.angularFireAuth.auth.currentUser.providerData.length; i++) {
         var provider = this.angularFireAuth.auth.currentUser.providerData[i];
-
+        console.log('a3:'+ provider);
         try {
           if (provider.providerId == firebase.auth.GoogleAuthProvider.PROVIDER_ID) {
             //logout - somente faz logout - dsconnect faz logout e limpa a conta 
             return this.googlePlus.disconnect()
               .then(() => {
                 return this.sigOutFirebase();
+              }).catch(error =>{
+                console.log('a4');
               })
           }
         } catch (error) {
@@ -111,7 +116,13 @@ export class AuthProvider {
 
 
   sigOutFirebase() {
-    return this.angularFireAuth.auth.signOut();
+    try{
+
+      return this.angularFireAuth.auth.signOut();
+    }catch(error){
+      console.log('b');
+    }
+    
   }
 
   resetPassword(email: string) {

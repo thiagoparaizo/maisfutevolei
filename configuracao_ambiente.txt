@@ -7,3 +7,30 @@ Toast
 > npm install angularfire2 --save
 > npm install firebase@4.8.0 --save
 > npm install @ionic-native/google-plus --save
+
+Rodar app no emulador:
+>  ionic cordova run android -c -s --debug
+
+Rodar no device:
+> ionic run android -l -c -s --debug
+
+
+/home/thiagoparaizo/Projetos/Futevolei2018/v_1.0/maisfutevolei/node_modules/@ionic/app-scripts/dist/dev-server/serve-config.js
+//exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'assets', 'www');
+exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'app', 'src', 'main', 'assets', 'www');
+
+
+
+> apagar diretórios: 
+	node_modules, plugins, platforms
+
+> npm install
+
+> ionic cordova prepare
+
+> ionic cordova build android
+
+> alterar arquivo:  /home/thiagoparaizo/Projetos/Futevolei2018/v_1.0/maisfutevolei/node_modules/@ionic/app-scripts/dist/dev-server/serve-config.js
+	exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'app', 'src', 'main', 'assets', 'www'
+
+> ionic cordova run android -l -c -s --debug

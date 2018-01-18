@@ -1,10 +1,9 @@
 import { AuthProvider } from './../providers/auth';
 import { CadastroUsuarioPage } from './../pages/cadastro-usuario/cadastro-usuario';
-import { TabsPage } from './../../src (cópia)/pages/tabs/tabs';
 import { styleapp } from './../environments/styleapp';
 
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav } from 'ionic-angular';
+import { Platform, Nav, Slides } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -24,13 +23,19 @@ import { LoginPage } from '../pages/login/login';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
+  @ViewChild(Slides) slides: Slides;
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad principal');
+  }
+
   @ViewChild(Nav) navCtrl: Nav;
     rootPage:any; 
 
     //login
     static userProfile:any = localStorage.getItem('userProfile');
     static tokenUsuario = localStorage.getItem('userToken');
-    logado = true; //TODO teste 
+    logado = false; //TODO teste 
 
     //thema
     menuPrincipalLogo = '';
@@ -55,11 +60,18 @@ export class MyApp {
       this.classeMenuPrincipal = this.styleClass.classeMenuPrincipal;
       //this.classeItensmenuPrincipal = this.styleClass.classeItensmenuPrincipal;
 
+      if(!this.menuPrincipalLogo || this.menuPrincipalLogo==''){
+        console.log('setando logo na mão');
+        this.menuPrincipalLogo = '../assets/logo_1_verde.png';
+      }
+
       //TODO mock 
       this.verificarTokenUsuario();
       //this.rootPage = CadastroUsuarioPage;
 
     });
+
+
   }
 
   verificarTokenUsuario(){
@@ -131,7 +143,11 @@ export class MyApp {
   }
 
   logout(){
+    console.log('logout..');
     this.authProvider.sigOut();
+    localStorage.removeItem('userProfile');
+    localStorage.removeItem('userToken');
+    console.log('.... loginpage');
     this.navCtrl.setRoot(LoginPage);
   }
 
