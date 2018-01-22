@@ -35,9 +35,9 @@ exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'app', 'src', 
 
 > ionic cordova run android -l -c -s --debug
 
-ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="1557779260980119" --variable APP_NAME="Mais Futevolei"
+ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="XXXXXXXX" --variable APP_NAME="XXXXXX"
 npm install --save @ionic-native/facebook
 
 editar arquivo: platforms\android\app\src\main\res\values\strings.xml
-add: <string name="fb_app_id">1557779260980119</string>
+add: <string name="fb_app_id">XXXXXXXXXXXX</string>
 <string name="fb_app_name">Mais Futevolei</string>
