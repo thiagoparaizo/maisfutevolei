@@ -60,18 +60,12 @@ Cordova PhoneCall Trap
 https://github.com/renanoliveira/cordova-phone-call-trap
 
 - FACEBOOK
-id-cecreto:491be224462acb15292ee731ab0cbbab
+id-cecreto:xxxxxxxxxxxxxxxxxx
 
-ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="1557779260980119" --variable APP_NAME="Mais Futevolei"
+ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="xxxxxxxxxx" --variable APP_NAME="Mais Futevolei"
 npm install --save @ionic-native/facebook
 
 editar arquivo: platforms\android\app\src\main\res\values\strings.xml
-add: <string name="fb_app_id">1557779260980119</string>
+add: <string name="fb_app_id">xxxxxxxxxx</string>
 <string name="fb_app_name">Mais Futevolei</string>
 
-
-error facebook:
-console.log: Firebase failure: {"code":"auth/account-exists-with-different-credential","message":"An account
-            already exists with the same email address but different sign-in credentials. Sign in using a provider
-            associated with this email
-            address.","email":"thiagoparaizo@gmail.com","providerId":"facebook.com","oauthAccessToken":"EAAWIyr99O5cBAKZCZBN1qKvDXE9n9AOvULEgsFLEFoLObyMBMrEPvMHBU6gzgd5FfM1DTCQG4H25srrAekTenjRkRJpZB8ptZB3tbpdO1DwlIQK4siHZB2odUZB6RodleqwhtH0PtYD0IJlTMZBvUtDI9hJdfVF6pMLSELWrytyamT72yBTZBDNjUoZCMq1kelfo8t0yeD7X6dQZDZD"}
