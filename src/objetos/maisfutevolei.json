@@ -1,0 +1,318 @@
+{
+  "alertas" : [ {
+    "conteudo" : "",
+    "data_inclusao" : "",
+    "data_transmissao" : "",
+    "id" : "",
+    "id_relacionamento" : "",
+    "tipo_alerta" : "quadra",
+    "titulo" : "",
+    "transmitido_sucesso" : false
+  } ],
+  "avaliacoes" : [ {
+    "avaliacao" : 0,
+    "data" : "",
+    "depoimento" : "",
+    "id_avaliacao" : "",
+    "id_relacionamento" : "",
+    "id_usuario" : "",
+    "tipo_avaliacao" : ""
+  } ],
+  "curtidas" : [ {
+    "curtida" : 0,
+    "data" : "",
+    "depoimento" : "",
+    "id_curtida" : "",
+    "id_relacionamento" : "",
+    "id_usuario" : "",
+    "tipo_curtida" : ""
+  } ],
+  "negativa" : [ {
+    "negativa" : 0,
+    "data" : "",
+    "depoimento" : "",
+    "id_negativa" : "",
+    "id_relacionamento" : "",
+    "id_usuario" : "",
+    "tipo_negativa" : ""
+  } ],
+  "denuncias" : [ {
+    "data" : "",
+    "depoimento" : "",
+    "id_denuncia" : "",
+    "id_relacionamento" : "",
+    "id_usuario" : "",
+    "tipo_denuncia" : ""
+  } ],
+  "perfis" : {
+    "administrador" : "administrador",
+    "anunciante" : "anunciante",
+    "atleta" : "atleta",
+    "contribuidor" : "contribuidor",
+    "jogador" : "jogador",
+    "patrocinador" : "patrocinador",
+    "professor" : "professor"
+  },
+  "quadras" : {
+    "CE" : [ {
+      "publicado":true,
+      "status_ativa" : true,
+      "acesso" : "select_acesso",
+      "apelido" : "",
+      "caracteristicas" : {
+        "acessibilidade" : false,
+        "acesso" : "select_acesso_quadra",
+        "alimentacao" : true,
+        "areia" : "select_areia",
+        "banheiro" : true,
+        "estaionamento" : false,
+        "familiar" : true,
+        "hidratacao" : true,
+        "iluminacao" : "select_ilumincao",
+        "local_para_banho" : true,
+        "possui_bola" : false,
+        "possui_marcacao" : true,
+        "possui_rede" : true,
+        "praia" : true,
+        "vento" : "select_vento"
+      },
+      "cidade" : "",
+      "endereco" : {
+        "bairro" : "",
+        "cep" : "",
+        "cidade" : "",
+        "cordenadas_gps" : "",
+        "logradouro" : "",
+        "numero" : 0
+      },
+      "favoritos" : [ {
+        "id_usuario" : ""
+      } ],
+      "id_unico" : "",
+      "nome" : "",
+      "propriedades" : {
+        "contato_resp" : "",
+        "criador" : "",
+        "data_inclusao" : "",
+        "descricao" : "",
+        "email_resp" : "",
+        "id_resp" : "",
+        "nome_resp" : "",
+        "ultima_atualizacao" : ""
+      }
+      
+    } ]
+  },
+  "rachas" : {
+    "CE" : [ {
+      "publicado":true,
+      "acesso" : "select_acesso",
+      "apelido" : "",
+      "caracteristicas" : {
+        "acesso" : "select_acesso_racha",
+        "alimentacao" : true,
+        "banheiro" : true,
+        "estaionamento" : false,
+        "familiar" : true,
+        "hidratacao" : true,
+        "local_para_banho" : true,
+        "visitantes" : true
+      },
+      "dia_horario" : [ {
+        "dia_semana" : "",
+        "horario" : ""
+      }, {
+        "dia_semana" : "",
+        "horario" : ""
+      } ],
+      "favoritos" : [ {
+        "id_usuario" : ""
+      } ],
+      "id_quadra" : "",
+      "id_unico" : "",
+      "nivel" : "select_nivel",
+      "nome" : "",
+      "participante" : [ {
+        "id_usuario" : ""
+      } ],
+      "propriedades" : {
+        "contato_resp" : "",
+        "criador" : "",
+        "data_inclusao" : "",
+        "descricao" : "",
+        "email_resp" : "",
+        "id_resp" : "",
+        "nome_resp" : "",
+        "ultima_atualizacao" : ""
+      },
+      "status_ativa" : true
+    } ]
+  },
+  "select_acesso_quadra" : {
+    "aluguel" : "ALUGUEL",
+    "aposta" : "SOMENTE APOSTAS",
+    "aulas" : "SOMENTE PARA AULAS",
+    "eventos" : "SOMENTE PARA EVENTOS",
+    "misto" : "ACESSO MISTO",
+    "particular" : "ACESSO PRIVADO",
+    "publico" : "ACESSO PUBLICO",
+    "treino" : "SOMENTE PARA TREINO"
+  },
+  "select_acesso_racha" : {
+    "aberto" : "ABERTO",
+    "aluguel" : "RACHA FECHADO (ALUGUEL)",
+    "aposta" : "SOMENTE APOSTAS",
+    "aulas" : "SOMENTE PARA AULAS",
+    "particular" : "RACHA FECHADO (PARTICULAR)",
+    "treino" : "SOMENTE PARA TREINO"
+  },
+  "select_areia" : {
+    "areia_boa" : "BOA",
+    "areia_excelente" : "EXCELENTE",
+    "areia_muito_boa" : "MUITO BOA",
+    "areia_regular" : "REGULAR",
+    "areia_ruim" : "RUIM"
+  },
+  "select_ilumincao" : {
+    "excelente_ilum" : "ILUMINAÇÃO EXCELENTE",
+    "media_ilum" : "ILUMINAÇÃO BOA",
+    "muito_boa_ilum" : "ILUMINAÇÃO MUITO BOA",
+    "pouca_ilum" : "POUCA ILUMINAÇÃO",
+    "regular_ilum" : "ILUMINAÇÃO REGULAR",
+    "sem_ilum" : "SEM ILUMINAÇÃO"
+  },
+  "select_nivel" : {
+    "altissimo" : "Nível Altíssimo (Só profissional)",
+    "alto" : "Nível Alto (Vários ralis)",
+    "aposta" : "Nível Aposta (Joga quem tem $$$)",
+    "iniciante" : "Iniciantes (Galera começando)",
+    "medio" : "Médio (Já dá pra brincar)",
+    "misto" : "Nível Misto (Todo mundo joga)"
+  },
+  "select_vento" : {
+    "forte_v" : "VENTO FORTE",
+    "moderado_v" : "VENTO MODERADO",
+    "muito_v" : "MUITO VENTO",
+    "pouco_v" : "POUCO VENTO",
+    "sem_v" : "SEM VENTO"
+  },
+  "usuarios" : {
+    "2Ms36CdSw6cQfDlAFYhcV21bxfn2" : {
+      "ativo":true,
+      "dados_pessoais" : {
+        "apelido" : "Thiago",
+        "data_nascimento" : "",
+        "e_mail" : "thiagoparaizo@gmail.com",
+        "estado" : "CE",
+        "nome" : "thiago paraizo",
+        "perfil" : "jogador",
+        "telefone" : "",
+        "tempo_pratica" : "2",
+        "uid" : "2Ms36CdSw6cQfDlAFYhcV21bxfn2"
+      }
+    },
+    "id_unico_usuario" : {
+      "ativo":true,
+      "nickname":"",
+      "atividades" : {
+        "aviso_presenca" : [ {
+          "data" : "",
+          "id_relacionamento" : "",
+          "rodada" : 0
+        } ],
+        "presenca_confirmada" : [ {
+          "data" : "",
+          "id_relacionamento" : "",
+          "rodada" : 0
+        } ],
+        "presenca_confirmada_foto" : [ {
+          "data" : "",
+          "id_relacionamento" : "",
+          "media" : "",
+          "rodada" : 0
+        } ]
+      },
+      "dados_pessoais" : {
+        "apelido" : "showman\"",
+        "data_nascimento" : "17/01/1986",
+        "e_mail" : "thiagoparaizo@gmail.com",
+        "tempo_pratica" : "10/2013",
+        "nome" : "Thiago Paraizo",
+        "perfil" : "jogador",
+        "telefone" : "85981516682",
+        "uid" : "id_unico_usuario",
+      
+        "bairro" : "Passaré",
+        "cidade" : "Fortaleza",
+        "complemento" : "apto 202 bl 3",
+        "estado" : "CE",
+        "logradouro" : "Rua Joaquim Martins 398",
+        "pais" : "Brasil"
+      },
+      "favorito" : [ {
+        "id_relacionamento" : "id_quadra_bm",
+        "alertas" : true,
+        "participante" : false,
+        "tipo" : "quadra"
+      }, {
+        "id_relacionamento" : "id_racha_bm_noite",
+        "alertas" : true,
+        "participante" : true,
+        "tipo" : "racha"
+      } ],
+      "habilidades" : {
+        "agilidade" : "",
+        "altura" : "",
+        "ataque" : "",
+        "defesa" : "",
+        "desenvoltura_cabeca" : "",
+        "desenvoltura_chilena" : "",
+        "desenvoltura_coxa" : "",
+        "desenvoltura_ombro" : "",
+        "desenvoltura_pe_direito" : "",
+        "desenvoltura_pe_esquerdo" : "",
+        "desenvoltura_peito" : "",
+        "desenvoltura_shark" : "",
+        "federado" : false,
+        "folego" : "",
+        "forca" : "",
+        "impulso" : "",
+        "lado_na_quadra" : "",
+        "leitura_de_jogo" : "",
+        "movimentacao" : "",
+        "nivel" : "",
+        "pe" : ""
+      },
+      "propriedades" : {
+        "alertas" : false,
+        "data_expiracao_premium" : "",
+        "mensagens" : true,
+        "notificacoes" : true,
+        "permitido_enviar_alertas" : true,
+        "permitido_enviar_mensagens" : true,
+        "premium" : false,
+        "propagandas" : true,
+        "status_ativo" : true,
+        "status_logado" : true,
+        "ultima_sincronizacao" : "",
+        "ultimo_acesso" : "",
+        "ultimo_login" : ""
+      },
+      "publicacoes":{
+        "publicado":true,
+        "id_relacionamento":"",
+        "data_publicacao":""
+      }
+      
+    },
+    "nicknames":[{
+      "nickname":"",
+      "uid":""
+    },{
+      "nickname":"",
+      "uid":""
+    }],
+
+    "teste" : "ssf"
+  }
+}
