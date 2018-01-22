@@ -86,5 +86,11 @@
     <plugin name="cordova-plugin-googleplus" spec="^5.2.1">
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.723010978896-k3v3rjtp3on1itcde1knglj90f1v6s92" />
     </plugin>
+    <plugin name="cordova-plugin-tts" spec="^0.2.3" />
+    <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
+        <variable name="APP_ID" value="1557779260980119" />
+        <variable name="APP_NAME" value="Mais Futevolei" />
+    </plugin>
     <engine name="android" spec="7.0.0" />
+    <engine name="browser" spec="5.0.3" />
 </widget>

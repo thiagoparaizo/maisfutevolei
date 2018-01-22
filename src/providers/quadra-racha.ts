@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 /*
   Generated class for the QuadraRachaProvider provider.
@@ -10,8 +11,24 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class QuadraRachaProvider {
 
-  constructor(public http: HttpClient) {
+  listaQuadars: Observable<any>;
+  
+  constructor(private afDataBase: AngularFireDatabase) {
     console.log('Hello QuadraRachaProvider Provider');
   }
+
+  listarQuadras(){
+
+  }
+
+  listaRachas(){
+
+  }
+
+  buscarFavoritos(){
+    
+  }
+
+
 
 }

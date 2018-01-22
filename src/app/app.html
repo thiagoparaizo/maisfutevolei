@@ -1,4 +1,4 @@
-<ion-menu [content]="mainContent" style="background-color: transparent" enabled="{{logado}}" side="right" type="push"><!-- TODO  cor da lasquinha do menu (direito)-->
+<ion-menu [content]="mainContent" style="background-color: transparent" enabled="{{userProvider.usuarioLogado}}" side="right" type="push"><!-- TODO  cor da lasquinha do menu (direito)-->
   <button ion-button menuToggle="right">MENU</button>
   <ion-header no-border>
     <ion-toolbar color = "cinza">
@@ -6,7 +6,7 @@
             <ion-title class="titletext" style="display:inline-block" > 
                <div style = "width : 100%; height : 100%; "> <!-- TODO  cor do fundo do header do menu-->
                   <div style = "float:left;width:100%; margin-top: 15px">
-                    <img src = {{menuPrincipalLogo}} />
+                    <img src = '{{menuPrincipalLogo}}' />
                   </div>
                   
                </div>
@@ -21,11 +21,13 @@
       <ion-list >
         <ion-item color="dark" id="Futevolei-list-item3">
           <ion-avatar item-left>
-            <img src="assets/img/IBEir5QlRRqiD7wNdhff_AnwpNbfCT5e0GIHGzkH8_perfil13.jpg" />
+            <img *ngIf=userProvider.userProfile src='{{userProvider.userProfile.photoURL}}' />
           </ion-avatar>
-          <h2 >
-            Thiago Paraizo
+          <div *ngIf=userProvider.userProfile> 
+            <h2 >
+            {{userProvider.userProfile.displayName}}
           </h2>
+        </div>
         </ion-item>
         
         <div color="twitter" style="width:100%;height:80px;margin:0px 0px;line-height:250px;background-color:#09afaf;text-align:center;">

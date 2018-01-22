@@ -16,6 +16,7 @@ import { InformaEsDeUsoPage } from '../pages/informa-es-de-uso/informa-es-de-uso
 
 import { HomeTabPage } from '../pages/home-tab/home-tab';
 import { LoginPage } from '../pages/login/login';
+import { UsuarioProvider } from '../providers/usuario';
 
 
 
@@ -30,12 +31,12 @@ export class MyApp {
   }
 
   @ViewChild(Nav) navCtrl: Nav;
+    
     rootPage:any; 
-
     //login
-    static userProfile:any = localStorage.getItem('userProfile');
-    static tokenUsuario = localStorage.getItem('userToken');
-    logado = false; //TODO teste 
+    //static userProfile:any = localStorage.getItem('userProfile');
+    //static tokenUsuario = localStorage.getItem('userToken');
+    //logado = false; //TODO teste 
 
     //thema
     menuPrincipalLogo = '';
@@ -44,7 +45,8 @@ export class MyApp {
     public styleClass: any;
 
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private authProvider:AuthProvider) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, 
+    public authProvider:AuthProvider, public userProvider: UsuarioProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -75,51 +77,28 @@ export class MyApp {
   }
 
   verificarTokenUsuario(){
+    console.log('verificarTokenUsuario >>');
 
-    console.log('token:' + MyApp.tokenUsuario);
+    console.log('token:' + this.userProvider.tokenUsuario);
     console.log('token cahce:' + localStorage.getItem('userToken'));
 
-    if(MyApp.tokenUsuario==null && localStorage.getItem('userToken')==null){
+    if(!this.userProvider.tokenUsuario && !localStorage.getItem('userToken')){
       console.log('Usuario deslogado...');
       this.rootPage = LoginPage;
-      this.logado = false;
+      this.userProvider.usuarioLogado = false;
     }else{
-      this.logado = true;      
       console.log('Usuario logado...');
-      if(!MyApp.userProfile){
-        console.log('MyApp.user == null');
-        MyApp.userProfile=JSON.parse(localStorage.getItem('userProfile'));
-      }
+      this.userProvider.usuarioLogado = true;
 
+      if(!this.userProvider.userProfile){
+        console.log('this.authProvider.userProfile == null');
+        this.userProvider.atualizarInformacoesUsuario(null);
+        //MyApp.userProfile=JSON.parse(localStorage.getItem('userProfile'));
+      }
+       //this.rootPage = CadastroUsuarioPage;
       this.rootPage = HomeTabPage;
     }
   }
-
-  static setUser(user: any) {
-    console.log('set user ---> '+ JSON.stringify(user));
-    
-    this.tokenUsuario = user.uid;
-    this.userProfile = JSON.stringify(user);
-
-    //console.log('1-'+user.displayName);
-    //console.log('2-'+this.user.displayName);
-    
-
-    localStorage.setItem('userProfile', JSON.stringify(this.userProfile)); 
-    localStorage.setItem('userToken', JSON.stringify(this.tokenUsuario)); 
-    console.log('setando token e usuário...');
-    
-  }
-
-  static clearUser() {
-    try {
-      localStorage.removeItem('userProfile');
-      console.log('removendo userProfile da sessão.')
-    } catch (error) {
-      console.log('erro ao remover userProfile da sessão.')
-    }
-  }
-
 
   goToHomeTab(params){
     if (!params) params = {};
@@ -144,8 +123,7 @@ export class MyApp {
 
   logout(){
     console.log('logout..');
-    this.authProvider.sigOut();
-    localStorage.removeItem('userProfile');
+    this.authProvider.signOut();
     localStorage.removeItem('userToken');
     console.log('.... loginpage');
     this.navCtrl.setRoot(LoginPage);

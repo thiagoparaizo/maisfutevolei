@@ -10,37 +10,40 @@
 </ion-header>
 <ion-content padding id="page10">
 
-  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
-    <ion-item>
-      <ion-label floating>Nome</ion-label>
-      <ion-input type="text" formControlName="nome" name="nome" text-uppercase></ion-input>
-
-    </ion-item>
-    <!--p [hidden]="myForm.controls.nome.valid" danger padding-left>Nome em branco</p-->
-    
+  <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit(cadastroForm.value)" *ngIf=usuarioProvider.userProfile>
+    Bem vindo <span style="text-transform:uppercase">{{usuarioProvider.userProfile.displayName}}</span>. 
     <ion-item>
       <ion-label floating>Apelido</ion-label>
       <ion-textarea type="text" formControlName="apelido" name="apelido"></ion-textarea>
     </ion-item>
-    <!--p [hidden]="myForm.controls.apelido.valid" danger padding-left>*requerido</p-->
+    <!--p [hidden]="cadastroForm.controls.apelido.valid" danger padding-left>*requerido</p-->
 
     <ion-item>
+      <ion-label floating>Estado:</ion-label>
+      <ion-select okText="OK" cancelText="Cancelar" formControlName="estado" >
+        <ion-option *ngFor="let opt2 of selectPtovider.optionsEstado" [value]="opt2.value">{{opt2.label}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <p [hidden]="cadastroForm.controls.estado.valid" danger padding-left>*</p>
+	
+    <ion-item>
+      <ion-label floating>Tempo de prática:</ion-label>
+      <ion-select okText="OK" cancelText="Cancelar" formControlName="tempo_pratica">
+        <ion-option *ngFor="let opt of selectPtovider.optionsTempoPratica" [value]="opt.value">{{opt.label}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <p [hidden]="cadastroForm.controls.tempo_pratica.valid" danger padding-left>*</p>
+
+    <!--ion-item>
       <ion-label floating>Aniversário:</ion-label>
       <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" min="1930-12-30" max="2018-01-01" 
       monthNames="Janeiro, Fevereiro, Mar\u00e7o, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
       formControlName="aniversario" name="aniversario"  ></ion-datetime>
     </ion-item>
-    <!--p [hidden]="myForm.controls.apelido.valid" danger padding-left>*requerido</p-->
+    <p [hidden]="myForm.controls.apelido.valid" danger padding-left>*requerido</p-->
 
-    <ion-item>
-        <ion-label floating>Tempo de prátivo do Futevôlei: </ion-label>
-        <ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" 
-        monthNames="Janeiro, Fevereiro, Mar\u00e7o, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
-        formControlName="temo_pratica" name="temo_pratica" ></ion-datetime>
-      </ion-item>
-      <!--p [hidden]="myForm.controls.apelido.valid" danger padding-left>*requerido</p-->
-
-      <button ion-button center full color="cinza" [disabled]="!myForm.controls.nome.valid || !myForm.controls.apelido.valid">
+      <button ion-button center full color="cinza" [disabled]="!cadastroForm.controls.apelido.valid ||
+        !cadastroForm.controls.estado.valid || !cadastroForm.controls.tempo_pratica.valid">
           OK
       </button>
       

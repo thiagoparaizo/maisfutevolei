@@ -1,7 +1,7 @@
+import { SelectProvider } from './../providers/select';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { GooglePlus } from '@ionic-native/google-plus'
 import { MyApp } from './app.component';
 import { BuscaPage } from '../pages/busca/busca';
 import { FavoritosPage } from '../pages/favoritos/favoritos';
@@ -30,6 +30,10 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 //Storage
 import { IonicStorageModule } from '@ionic/storage';
+import { UsuarioProvider } from '../providers/usuario';
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+import { Facebook } from '@ionic-native/facebook'
+import { GooglePlus } from '@ionic-native/google-plus'
 
 @NgModule({
   declarations: [
@@ -75,7 +79,11 @@ import { IonicStorageModule } from '@ionic/storage';
     AuthProvider,
     ConfiguracaoProvider,
     QuadraRachaProvider,
+    UsuarioProvider,
+    SelectProvider,
     GooglePlus,
+    Facebook,
+    TextToSpeech,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

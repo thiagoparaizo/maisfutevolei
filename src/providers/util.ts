@@ -28,7 +28,7 @@ export class UtilProvider {
     this.loader.dismiss();
   }
 
-  static showToast(object, message, pos) {
+  /*static showToast(object, message, pos) {
     let toast = object.toastCtrl.create({
       message: message,
       duration: 3000,
@@ -38,11 +38,27 @@ export class UtilProvider {
       console.log('Dismissed toast');
     });
     toast.present();
-  }
+  }*/
+
 
   //top, middle or bottom
   public showToast(text: string, duration: number, position: string) {
     //this.favorite = true;
+    if (!position || position == '') position = 'bottom';
+    let toast = this.toastCtrl.create({
+      message: text,
+      duration: duration,
+      position: position,
+      showCloseButton: true,
+      closeButtonText: 'x'
+
+    });
+    toast.present();
+  }
+
+  public showToastError(text: string, duration: number, position: string) {
+    //this.favorite = true;
+    //top middle ou bottom
     if (!position || position == '') position = 'bottom';
     let toast = this.toastCtrl.create({
       message: text,

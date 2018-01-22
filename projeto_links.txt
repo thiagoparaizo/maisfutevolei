@@ -1,0 +1,77 @@
+LINKS
+
+IONIC NATIVE - DOC
+https://ionicframework.com/docs/native/
+
+ANGULARFIRE
+https://github.com/angular/angularfire2/blob/master/docs/rtdb/objects.md
+https://github.com/angular/angularfire2/blob/master/docs/rtdb/lists.md
+https://github.com/angular/angularfire2/blob/master/docs/ionic/v3.md
+
+
+- Google Developper - meus certificados
+https://dashboard.ionicjs.com/app/47629e77/settings/certs
+
+
+- MODELAGEM
+https://creately.com/app/?tempID=hv6mwjsu1&login_type=demo#
+
+
+-AUTENTICAÇÃO
+https://gist.github.com/zenorocha/9282426622fc8f46a6caeff40008de75
+https://javebratt.com/ionic-social-login-firebase/
+https://firebase.google.com/docs/auth/web/facebook-login
+
+
+- FIREBASE PUSH NOTIFICATIONS
+https://firebase.google.com/docs/cloud-messaging/android/first-message?authuser=0#access_the_registration_token
+http://tphangout.com/ionic-2-push-notifications-with-firebase/
+http://www.damirscorner.com/blog/posts/20170804-FirebasePushNotificationsInIonicAndCordova.html
+https://medium.com/@adsonrocha/como-fazer-notifica%C3%A7%C3%B5es-push-com-o-ionic-2-onesignal-b5fe22985615
+
+
+- Keeping our Promises (and Callbacks)
+https://firebase.googleblog.com/2016/01/keeping-our-promises-and-callbacks_76.html
+
+- FIREBASE IONIC LOGIN
+http://tphangout.com/ionic-2-google-auth-with-firebase/
+
+
+- FACEBOOK_APROVAÇÃO_LOGIN
+https://developers.facebook.com/docs/facebook-login/review/
+https://developers.facebook.com/docs/facebook-login/review/how-to-submit
+
+
+
+- CRUD
+https://medium.com/@adsonrocha/como-criar-um-crud-com-ionic-2-firebase-ae715e8b64bb
+https://www.pluralsight.com/guides/front-end-javascript/using-angularfire2-to-build-ionic-2-firebase-apps
+https://www.joshmorony.com/building-a-crud-ionic-2-application-with-firebase-angularfire/
+
+
+OUTROS
+https://www.airpair.com/angularjs/posts/build-a-real-time-hybrid-app-with-ionic-firebase
+https://github.com/mappmechanic/ionic-firebase
+
+ERRO COMPILATION FACEBOOK
+https://cursos.alura.com.br/forum/topico-grande-problema-ionic-3-facebook-native-52349
+
+Cordova PhoneCall Trap
+https://github.com/renanoliveira/cordova-phone-call-trap
+
+- FACEBOOK
+id-cecreto:491be224462acb15292ee731ab0cbbab
+
+ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="1557779260980119" --variable APP_NAME="Mais Futevolei"
+npm install --save @ionic-native/facebook
+
+editar arquivo: platforms\android\app\src\main\res\values\strings.xml
+add: <string name="fb_app_id">1557779260980119</string>
+<string name="fb_app_name">Mais Futevolei</string>
+
+
+error facebook:
+console.log: Firebase failure: {"code":"auth/account-exists-with-different-credential","message":"An account
+            already exists with the same email address but different sign-in credentials. Sign in using a provider
+            associated with this email
+            address.","email":"thiagoparaizo@gmail.com","providerId":"facebook.com","oauthAccessToken":"EAAWIyr99O5cBAKZCZBN1qKvDXE9n9AOvULEgsFLEFoLObyMBMrEPvMHBU6gzgd5FfM1DTCQG4H25srrAekTenjRkRJpZB8ptZB3tbpdO1DwlIQK4siHZB2odUZB6RodleqwhtH0PtYD0IJlTMZBvUtDI9hJdfVF6pMLSELWrytyamT72yBTZBDNjUoZCMq1kelfo8t0yeD7X6dQZDZD"}
