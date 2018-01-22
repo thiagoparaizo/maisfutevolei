@@ -1,0 +1,56 @@
+Windows
+
+Update Node e NPM:
+- baixar instaldor no site.
+- instalar normalmente
+- ele já atualiza o NPM também.
+
+==============================================================
+
+NPM behind proxy:
+- incluir as propriedades no arquivo .npmrc:
+	* se senha contém @, instalr um proxy local (http://ntlmaps.sourceforge.net/), configurar porta/ip do proxy, user e senha:
+		proxy=http://mc1382919:5865/      
+		https-proxy=http://mc1382919:5865/
+		strict-ssl=false
+		
+	* se a senha não tem '@', pode apontar direto para o proxy:
+		proxy=http://<user>:<senha>@mc1382919:5865/
+		https-proxy=http://<user>:<senha>@mc1382919:5865/
+		strict-ssl=false
+		
+==============================================================
+Update angular
+- 
+
+Update Ionic
+- npm install -g ionic@latest
+
+IONIC behind proxy:
+- install ionic proxy: 
+	npm i -g @ionic/cli-plugin-proxy@latest
+	
+- set variáveis de ambiente:
+	set proxy=http://mc1382919:5865
+	set strict-ssl=false
+	set NODE_TLS_REJECT_UNAUTHORIZED=0 
+
+	
+Python (Variável)
+npm config set python D:\Library\Python\Python27\python.exe	
+============================================
+
+
+	
+Install angularfire2:
+npm install angularfire2 firebase@4.8.0 --save
+
+LocalStorage
+
+ionic cordova plugin add cordova-sqlite-storage
+npm install --save @ionic/storage
+
+GooglePlus
+
+$ ionic cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=myreversedclientid
+$ npm install --save @ionic-native/google-plus
