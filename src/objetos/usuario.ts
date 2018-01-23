@@ -4,20 +4,21 @@ import { Favorito } from "./favorito";
 import { Habilidades } from "./habilidades";
 import { PropriedadesUsuario } from "./propriedades-usuario";
 import { Publicacao } from "./publicacao";
-import { PropriedadesQuadra } from "./propriedade_quadra";
+import { Propriedades } from "./propriedades";
 
 export class Usuario {
     $key: string;
 
     ativo:boolean
     nickname :string;
-    dados_pessoais: DadosPessoais;
+    data_cadastro:string;
+    dados_pessoais: DadosPessoais = new DadosPessoais();
     
     favorito: Array<Favorito>[];
     publicacoes: Array<Publicacao>[];
-    atividades: Atividades;
+    atividades: Atividades = new Atividades();
     
-    habilidades:Habilidades;
-    propriedades: PropriedadesUsuario;
+    habilidades:Habilidades = new Habilidades();
+    propriedades: PropriedadesUsuario = new PropriedadesUsuario();
     
   }

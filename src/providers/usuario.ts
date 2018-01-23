@@ -1,8 +1,10 @@
+import { Usuario } from './../objetos/usuario';
 import { UtilProvider } from './util';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Injectable } from '@angular/core';
 import { FIREBASE_URL } from '../environments/firebase-url';
 import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
 
 /*
   Generated class for the UsuarioProvider provider.
@@ -65,19 +67,23 @@ export class UsuarioProvider {
 
   existeUsuario() {
     console.log('existeUsuario >>');
-    let userId = this.userProfile.uid;
+    var userId = this.userProfile.uid;
     console.log('uid current: '+ userId);
 
-    this.afDataBase.database.ref(FIREBASE_URL.PATH_USER).child(userId).once('value', function (snapshot) {
-      var exists = (snapshot.val() !== null);
+    return this.afDataBase.database.ref(FIREBASE_URL.PATH_USER).child(userId).once('value', function (snapshot) {
+      console.log('obj: '+ snapshot.val());
+      console.log('obj json: '+ JSON.stringify(snapshot.val()));
+      
+      var exists = (snapshot.val() != null);
       
       if (exists) {
         console.log('Usuario existente.');
-        return true;
+        //return true;
       } else {
         console.log('Usuario inexistente.');
-        return false;
+        //return false;
       }
+      return snapshot.val();
 
     });
   }
@@ -98,25 +104,19 @@ export class UsuarioProvider {
     })
   }
 
-  cadastrarUsuario(data:any){
+  cadastrarUsuario(usuario:Usuario){
     this.utilProvider.loaderIn('Aguarde...');
     let url = FIREBASE_URL.PATH_USER+this.userProfile.uid+'/dados_pessoais' ;
     
     console.log('url: '+ url);
     const itemRef = this.afDataBase.object(url);
-    
-    itemRef.set({
-      apelido : data.apelido,
-        data_nascimento : '',
-        e_mail : this.userProfile.email,
-        estado: data.estado,
-        tempo_pratica : data.tempo_pratica,
-        nome : this.userProfile.displayName,
-        perfil : 'jogador',
-        telefone : '',
-        uid : this.userProfile.uid
 
-    }).then(result=>{
+    console.log('usuario instanciado: '+JSON.stringify(usuario));
+
+    //usuario.data_cadastro = firebase.database. ServerValue.TIMESTAMP;
+
+    itemRef.set(usuario)
+    .then(result=>{
       console.log('result: ' +result);
       this.utilProvider.loaderOut();
       this.utilProvider.showToast('Tudo pronto, seja bem vindo!',3000,'middle');

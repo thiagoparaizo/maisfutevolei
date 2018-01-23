@@ -1,6 +1,6 @@
 export class PropriedadesUsuario {
 
-    alertas: false;
+    alertas: true;
     data_expiracao_premium: string;
     mensagens: true;
     notificacoes: true;
@@ -9,9 +9,12 @@ export class PropriedadesUsuario {
     premium: false;
     propagandas: true;
     status_ativo: true;
-    status_logado: true;
     ultima_sincronizacao: string;
     ultimo_acesso: string;
     ultimo_login: string;
     
+    public constructor(){
+        
+    }
+
 }

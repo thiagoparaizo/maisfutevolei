@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { SelectProvider } from './../providers/select';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,7 +28,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { environment } from '../environments/environment';
 //Storage
 import { IonicStorageModule } from '@ionic/storage';
 import { UsuarioProvider } from '../providers/usuario';

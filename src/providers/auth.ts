@@ -1,7 +1,7 @@
 import { UsuarioProvider } from './usuario';
 import { FIREBASE_URL } from '../environments/firebase-url';
 import { MyApp } from './../app/app.component';
-import { UserLogin } from './../app/objetos/use-login';
+import { UserLogin } from './../objetos/use-login';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';

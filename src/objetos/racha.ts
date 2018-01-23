@@ -1,6 +1,6 @@
-import { Nickname } from "./ nickname";
-import { Propriedades } from "./ propriedades";
-import { CaracteristicasRacha } from "./ caracteristica_racha";
+import { Nickname } from "./nickname";
+import { Propriedades } from "./propriedades";
+import { CaracteristicasRacha } from "./caracteristica_racha";
 import { DataAcontecimento } from "./data_acontecimento";
 import { Curtida } from "./curtida";
 import { Negativa } from "./negativa";

@@ -2,7 +2,7 @@ import { UsuarioProvider } from './../../providers/usuario';
 import { HomeTabPage } from './../home-tab/home-tab';
 import { CadastroUsuarioPage } from './../cadastro-usuario/cadastro-usuario';
 
-import { UserLogin } from './../../app/objetos/use-login';
+import { UserLogin } from './../../objetos/use-login';
 import { UtilProvider } from './../../providers/util';
 import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
@@ -59,15 +59,24 @@ export class LoginPage {
           this.usuarioProvider.setarInformacoesUsuario(user);
           this.utilProvider.loaderOut();
 
-          if (this.usuarioProvider.existeUsuario()) {
-            this.utilProvider.showToast('Sucesso!', 3500, 'middle');
-            this.navCtrl.setRoot(HomeTabPage);
+          this.usuarioProvider.existeUsuario().
+          then(result =>{
+            console.log('result: '+JSON.stringify(result));
+            
+            if (result.val() != null) {
+              this.utilProvider.showToast('Sucesso!', 3500, 'middle');
+              this.navCtrl.setRoot(HomeTabPage);
+  
+            } else {
+              this.utilProvider.showToast('Primeira vez por aqui. É necessário preencher algumas informações simples.', 3500, '');
+              this.navCtrl.setRoot(CadastroUsuarioPage);
+  
+            }
+          })
+          .catch(error =>{
+            console.log('erro na verificacao de usuario.');
+          });
 
-          } else {
-            this.utilProvider.showToast('Primeira vez por aqui. É necessário preencher algumas informações simples.', 3500, '');
-            this.navCtrl.setRoot(CadastroUsuarioPage);
-
-          }
         }else{
           this.utilProvider.loaderOut();
         }
@@ -95,15 +104,22 @@ export class LoginPage {
           this.usuarioProvider.setarInformacoesUsuario(user);
           this.utilProvider.loaderOut();
 
-          if (this.usuarioProvider.existeUsuario()) {
-            this.utilProvider.showToast('Sucesso!', 3500, 'middle');
-            this.navCtrl.setRoot(HomeTabPage);
+          this.usuarioProvider.existeUsuario().
+          then(result =>{
+            if (result) {
+              this.utilProvider.showToast('Sucesso!', 3500, 'middle');
+              this.navCtrl.setRoot(HomeTabPage);
+  
+            } else {
+              this.utilProvider.showToast('Primeira vez por aqui. É necessário preencher algumas informações simples.', 3500, '');
+              this.navCtrl.setRoot(CadastroUsuarioPage);
+  
+            }
+          })
+          .catch(error =>{
+            console.log('erro na verificacao de usuario.');
+          });
 
-          } else {
-            this.utilProvider.showToast('Primeira vez por aqui. É necessário preencher algumas informações simples.', 3500, '');
-            this.navCtrl.setRoot(CadastroUsuarioPage);
-
-          }
         }else{
           this.utilProvider.loaderOut();
         }
