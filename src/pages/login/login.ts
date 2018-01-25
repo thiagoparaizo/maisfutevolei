@@ -61,10 +61,11 @@ export class LoginPage {
 
           this.usuarioProvider.existeUsuario().
           then(result =>{
-            console.log('result: '+JSON.stringify(result));
+            console.log('result: ' +result);
             
-            if (result.val() != null) {
+            if (result) {
               this.utilProvider.showToast('Sucesso!', 3500, 'middle');
+              this.menu.enable(true);
               this.navCtrl.setRoot(HomeTabPage);
   
             } else {
@@ -108,6 +109,7 @@ export class LoginPage {
           then(result =>{
             if (result) {
               this.utilProvider.showToast('Sucesso!', 3500, 'middle');
+              this.menu.enable(true);
               this.navCtrl.setRoot(HomeTabPage);
   
             } else {

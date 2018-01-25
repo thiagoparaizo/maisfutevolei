@@ -70,22 +70,27 @@ export class UsuarioProvider {
     var userId = this.userProfile.uid;
     console.log('uid current: '+ userId);
 
-    return this.afDataBase.database.ref(FIREBASE_URL.PATH_USER).child(userId).once('value', function (snapshot) {
-      console.log('obj: '+ snapshot.val());
-      console.log('obj json: '+ JSON.stringify(snapshot.val()));
+    return new Promise((resolve, reject) => {
       
-      var exists = (snapshot.val() != null);
-      
-      if (exists) {
-        console.log('Usuario existente.');
-        //return true;
-      } else {
-        console.log('Usuario inexistente.');
-        //return false;
-      }
-      return snapshot.val();
-
-    });
+      this.afDataBase.database.ref(FIREBASE_URL.PATH_USER).child(userId).once('value', function (snapshot) {
+        console.log('obj: '+ snapshot.val());
+        console.log('obj json: '+ JSON.stringify(snapshot.val()));
+        
+        var exists = (snapshot.val() != null);
+        
+        if (exists) {
+          console.log('Usuario existente.');
+          resolve(true);
+        } else {
+          console.log('Usuario inexistente.');
+          resolve(false);
+        }
+        //return snapshot.val();
+  
+      });
+    }); 
+    
+    
   }
 
   verificaExistenciaUsuario(){
