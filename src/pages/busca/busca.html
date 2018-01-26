@@ -17,6 +17,22 @@
       refreshingSpinner="circles">
   </ion-refresher-content>
   </ion-refresher>
+  <div *ngIf=listaQuadras >Lista de Quadras:</div>
+
+  <ul>
+    <li *ngFor="let item of listaQuadras | async">
+       {{ item?.apelido }}
+    </li>
+  </ul>
+
+  <hr>
+  <div *ngIf=listaRachas>Lista de Rachas:</div> 
+
+  <ul>
+    <li *ngFor="let item of listaRachas | async">
+       {{ item?.apelido }}
+    </li>
+  </ul>
 
   <form id="busca-form1">
       <ion-searchbar placeholder="buscar por..." name="" id="busca-search1"></ion-searchbar>
