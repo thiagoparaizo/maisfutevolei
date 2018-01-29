@@ -125,6 +125,7 @@ export class MyApp {
     console.log('logout..');
     this.authProvider.signOut();
     localStorage.removeItem('userToken');
+    this.userProvider.limparDadosUsuarioSessao();
     console.log('.... loginpage');
     this.navCtrl.setRoot(LoginPage);
   }

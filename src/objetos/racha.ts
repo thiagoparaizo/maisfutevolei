@@ -17,13 +17,13 @@ export class Racha {
     apelido: string;
     acesso: string;
     nivel: string;
-    caracteristicas: CaracteristicasRacha;
-    data_acontecimento: Array<DataAcontecimento>[];
-    participante: Array<Nickname>[];
-    favoritos: Array<Nickname>[];
-    propriedades: Propriedades;
-    listaCurtidas:Array<Curtida>[];
-    listaNegativas:Array<Negativa>[];
-    listaAvaliacoes:Array<Avaliacao>[];
+    caracteristicas: CaracteristicasRacha = new CaracteristicasRacha();
+    data_acontecimento: DataAcontecimento[] = Array<DataAcontecimento>();
+    participante: Nickname[] = Array<Nickname>();
+    favoritos: Nickname[] = Array<Nickname>();
+    propriedades: Propriedades = new Propriedades();
+    listaCurtidas:Curtida[] = Array<Curtida>();
+    listaNegativas:Negativa[] = Array<Negativa>();
+    listaAvaliacoes:Avaliacao[] = Array<Avaliacao>();
     
 }

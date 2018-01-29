@@ -14,8 +14,8 @@ export class Usuario {
     data_cadastro:string;
     dados_pessoais: DadosPessoais = new DadosPessoais();
     
-    favorito: Array<Favorito>[];
-    publicacoes: Array<Publicacao>[];
+    favorito: Favorito[] = new Array<Favorito>();
+    publicacoes: Publicacao[] = new Array<Publicacao>();
     atividades: Atividades = new Atividades();
     
     habilidades:Habilidades = new Habilidades();

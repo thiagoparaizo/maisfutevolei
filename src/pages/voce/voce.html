@@ -8,7 +8,8 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding style="background:url(assets/img/b54efXUeR0qqllPlgKPV_background-4.jp5) no-repeat center;background-size:cover;" id="page6">
+<ion-content padding style="background:url(assets/img/b54efXUeR0qqllPlgKPV_background-4.jp5) no-repeat center;background-size:cover;"
+  id="page6">
   <h4 id="Voce-heading1" style="color:#000000;">
     Vamos juntos...
   </h4>
@@ -21,27 +22,15 @@
       pode levar o esporte a todos os lugares do páis, e porque não do mundo?? Entre de cabeça nessa idéias :)
     </p>
   </div>
-  <form id="Voce-form3">
-    <ion-item id="Voce-toggle1">
-      <ion-label>
-        Toggle
-      </ion-label>
-      <ion-toggle color="positive" checked="false"></ion-toggle>
-    </ion-item>
-    <ion-item id="Voce-toggle2">
-      <ion-label>
-        Toggle
-      </ion-label>
-      <ion-toggle color="positive" checked="false"></ion-toggle>
-    </ion-item>
-    <ion-item id="Voce-select1">
-      <ion-label>
-        Select
-      </ion-label>
-      <ion-select name=""></ion-select>
-    </ion-item>
-  </form>
-  <button id="Voce-button1" ion-button color="positive" block>
-    Add++
-  </button>
+ 
+
+  <ion-fab right bottom #fab2>
+    <button ion-fab color="verde"><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="openSocial('facebook', fab2)"><ion-icon name="football"></ion-icon><div class="label">++Quadra</div></button>
+      <button ion-fab (click)="openSocial('twitter', fab2)"><ion-icon name="football"></ion-icon><div class="label">++Racha</div></button>
+    </ion-fab-list>
+  </ion-fab>
+
+
 </ion-content>

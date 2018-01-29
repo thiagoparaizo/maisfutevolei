@@ -1,14 +1,14 @@
 export class PropriedadesUsuario {
 
-    alertas: true;
+    alertas: boolean = true;
     data_expiracao_premium: string;
-    mensagens: true;
-    notificacoes: true;
-    permitido_enviar_alertas: true;
-    permitido_enviar_mensagens: true;
-    premium: false;
-    propagandas: true;
-    status_ativo: true;
+    mensagens: boolean = true;
+    notificacoes: boolean = true;
+    permitido_enviar_alertas: boolean = true;
+    permitido_enviar_mensagens: boolean = true;
+    premium: boolean = false;
+    propagandas: boolean = true;
+    status_ativo: boolean = true;
     ultima_sincronizacao: string;
     ultimo_acesso: string;
     ultimo_login: string;

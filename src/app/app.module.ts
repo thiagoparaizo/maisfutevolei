@@ -34,6 +34,7 @@ import { UsuarioProvider } from '../providers/usuario';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Facebook } from '@ionic-native/facebook'
 import { GooglePlus } from '@ionic-native/google-plus'
+import { FiltroBusca } from '../pages/busca/filtros-busca';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { GooglePlus } from '@ionic-native/google-plus'
     ContatoFutevoleiPage,
     InformaEsDeUsoPage,
     LoginPage,
-    CadastroUsuarioPage
+    CadastroUsuarioPage,
+    FiltroBusca
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,8 @@ import { GooglePlus } from '@ionic-native/google-plus'
     ContatoFutevoleiPage,
     InformaEsDeUsoPage,
     LoginPage,
-    CadastroUsuarioPage
+    CadastroUsuarioPage,
+    FiltroBusca
   ],
   providers: [
     StatusBar,

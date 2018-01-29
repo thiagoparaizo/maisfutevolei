@@ -1,3 +1,4 @@
+import { Favorito } from './../../objetos/favorito';
 import { DadosPessoais } from './../../objetos/dados_pessoais';
 import { Usuario } from './../../objetos/usuario';
 import { UtilProvider } from './../../providers/util';
@@ -9,6 +10,7 @@ import { HomeTabPage } from './../home-tab/home-tab';
 import { UsuarioProvider } from '../../providers/usuario';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { SelectProvider } from '../../providers/select';
+import { Publicacao } from '../../objetos/publicacao';
 
 @Component({
   selector: 'page-cadastro-usuario',
@@ -80,7 +82,8 @@ export class CadastroUsuarioPage {
     
     usuarioObj.ativo = true;
     usuarioObj.nickname = '@tparaizo';
-  
+    usuarioObj.data_cadastro = '234556778';
+
     usuarioObj.dados_pessoais.uid = this.usuarioProvider.userProfile.uid;
     usuarioObj.dados_pessoais.nome = this.usuarioProvider.userProfile.displayName;
     usuarioObj.dados_pessoais.e_mail = this.usuarioProvider.userProfile.email;
@@ -90,6 +93,15 @@ export class CadastroUsuarioPage {
     usuarioObj.dados_pessoais.tempo_pratica = data.tempo_pratica;
     usuarioObj.dados_pessoais.estado = data.estado;
     usuarioObj.dados_pessoais.pais = 'BR';
+
+    let favorito:Favorito = new Favorito();
+    favorito.alertas = true;
+    favorito.id_relacionamento = 'id_racha';
+    favorito.participante = true;
+    favorito.tipo = 'Racha';
+    
+    usuarioObj.favorito.push(favorito);
+    usuarioObj.publicacoes.push(new Publicacao());
     
     return usuarioObj;
   }

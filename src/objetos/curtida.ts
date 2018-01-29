@@ -1,7 +1,7 @@
 export class Curtida {
     $key: string;
 
-    curtida: 0;
+    curtida: number;
     data: string;
     depoimento: string;
     id_curtida: string;

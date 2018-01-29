@@ -3,53 +3,73 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>
-      Busca
-    </ion-title>
+    <ion-title>Busca</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
+
 <ion-content padding style="background-size:cover;" id="page2">
-  <ion-refresher (ionRefresh)="doRefresh($event)" > <!--(ionPull)="doPulling($event)"-->
-      <ion-refresher-content
-      pullingIcon="arrow-dropdown"
-      pullingText="Pexe para atualizar..."
-      refreshingText="Atualizando..."
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <!--(ionPull)="doPulling($event)"-->
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pexe para atualizar..." refreshingText="Atualizando..."
       refreshingSpinner="circles">
-  </ion-refresher-content>
+    </ion-refresher-content>
   </ion-refresher>
-  <div *ngIf=listaQuadras >Lista de Quadras:</div>
+
+<form id="busca-form1">
+  <ion-searchbar placeholder="buscar por..." name="" id="busca-search1"></ion-searchbar>
+  <ion-item id="busca-range1">
+    <ion-range min="0" max="100" step="5" color="positive" value="50" name="distancia">
+      <ion-label range-left>
+        Distância
+      </ion-label>
+    </ion-range>
+  </ion-item>
+  <ion-list>
+    <ion-list-header>
+      Distancia
+      <ion-badge item-end color="danger">{{distancia}}</ion-badge>
+    </ion-list-header>
+    <ion-item>
+      
+      Select number : <span>{{distancia}}</span>
+      <div class="range range-positive">
+        1000
+        <input type="range" name="volume" min="1000" max="2000" value="{{distancia}}" ng-model="distancia">
+        2000
+      </div>
+    </ion-item>
+  </ion-list>
+</form>
+  
+  <div *ngIf=quadraRachaProvider.listaQuadras>Lista de Quadras:</div>
 
   <ul>
-    <li *ngFor="let item of listaQuadras | async">
-       {{ item?.apelido }}
+    <li *ngFor="let item of quadraRachaProvider.listaQuadras | async">
+      {{ item?.apelido }}
     </li>
   </ul>
 
   <hr>
-  <div *ngIf=listaRachas>Lista de Rachas:</div> 
+  <div *ngIf=quadraRachaProvider.listaRachas>Lista de Rachas:</div>
 
   <ul>
-    <li *ngFor="let item of listaRachas | async">
-       {{ item?.apelido }}
+    <li *ngFor="let item of quadraRachaProvider.listaRachas | async">
+      {{ item?.apelido }}
     </li>
   </ul>
 
-  <form id="busca-form1">
-      <ion-searchbar placeholder="buscar por..." name="" id="busca-search1"></ion-searchbar>
-      <ion-item id="busca-range1">
-        <ion-range min="0" max="100" step="1" color="positive" value="50" name="distancia">
-          <ion-label range-left>
-            Distância
-          </ion-label>
-        </ion-range>
-      </ion-item>
-      <ion-item color="none" id="busca-list-item22">
-        opções de busca
-        <ion-note item-right></ion-note>
-        <ion-icon name="add-circle" item-right (click)="showToast2('teste...', 3000, '')"></ion-icon>
-        <ion-icon name="add-circle" item-right (click)="presentWithGif1()"></ion-icon>
-      </ion-item>
-    </form>
-    
-  
+
+
+
+
+
+
+  <ion-icon name="add-circle" item-right (click)="addQuadra()"> + Quadra</ion-icon>
+  <ion-icon name="add-circle" item-right (click)="addRacha()"> + Racha</ion-icon>
+
 </ion-content>

@@ -19,12 +19,12 @@ export class Quadra {
     estado:string;
     cidade : string;
     coordenadas:string;
-    endereco: Endereco;
-    caracteristicas: CaracteristicasQuadra;
-    favoritos:Array<Nickname>[];
-    propriedades: Propriedades;
-    listaCurtidas:Array<Curtida>[];
-    listaNegativas:Array<Negativa>[];
-    listaAvaliacoes:Array<Avaliacao>[];
+    endereco: Endereco = new Endereco();
+    caracteristicas: CaracteristicasQuadra = new CaracteristicasQuadra();
+    favoritos:Nickname[] = new Array<Nickname>();
+    propriedades: Propriedades = new Propriedades();
+    listaCurtidas:Curtida[] = new Array<Curtida>();
+    listaNegativas:Negativa[]= Array<Negativa>();
+    listaAvaliacoes:Avaliacao[]= Array<Avaliacao>();
 
 }

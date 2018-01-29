@@ -1,19 +1,19 @@
 export class CaracteristicasQuadra{
 
-    acessibilidade : false;
+    acessibilidade : boolean;
         acesso : string;
-        alimentacao : true;
+        alimentacao : boolean;
         areia : string;
-        banheiro : true;
-        estaionamento : false;
-        familiar : true;
-        hidratacao : true;
+        banheiro : boolean;
+        estacionamento : boolean;
+        familiar : boolean;
+        hidratacao : boolean;
         iluminacao : string;
-        local_para_banho : true;
-        possui_bola : false;
-        possui_marcacao : true;
-        possui_rede : true;
-        praia : true;
+        local_para_banho : boolean;
+        possui_bola : boolean;
+        possui_marcacao : boolean;
+        possui_rede : boolean;
+        praia : boolean;
         vento : string;
 
 }

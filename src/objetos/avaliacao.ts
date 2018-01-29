@@ -1,7 +1,7 @@
 export class Avaliacao {
     $key: string;
     
-    avaliacao: 0;
+    avaliacao: number;
     data: string;
     depoimento: string;
     id_avaliacao: string;

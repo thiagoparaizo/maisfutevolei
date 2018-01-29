@@ -1,7 +1,7 @@
 export class Negativa {
     $key: string;
 
-    negativa: 0;
+    negativa: number;
     data: string;
     depoimento: string;
     id_negativa: string;
