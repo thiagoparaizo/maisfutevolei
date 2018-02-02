@@ -20,6 +20,8 @@ export class UsuarioProvider {
   public tokenUsuario: any = null;
   public usuario:any = null;
 
+  private usuarioNovo: Usuario;
+
   constructor(private afDataBase: AngularFireDatabase, private angularFireAuth: AngularFireAuth,
     private utilProvider: UtilProvider) {
 
@@ -73,8 +75,10 @@ export class UsuarioProvider {
     return new Promise((resolve, reject) => {
 
       this.afDataBase.database.ref(FIREBASE_URL.PATH_USER).child(userId).once('value', function (snapshot) {
-        console.log('obj: ' + snapshot.val());
-        console.log('obj json: ' + JSON.stringify(snapshot.val()));
+        console.log('existeusuario obj json: ' + JSON.stringify(snapshot.val()));
+       
+        this.usuarioNovo = new Usuario(snapshot.val());
+        console.log('usuario novo: '+JSON.stringify(this.usuarioNovo));
 
         var exists = (snapshot.val() != null);
 

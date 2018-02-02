@@ -52,8 +52,8 @@ $colors: (
   cinza_claro:  #666666,
   verde:  #008080,
   verde_claro: #09afaf,
-  branco: #ffffff
-
+  branco: #ffffff,
+  amarelo:rgb(230, 104, 2)
 );
 
 
@@ -144,6 +144,22 @@ $tabs-md-tab-icon-color-active: #fff; //OK cor do icone active
 .custom a {
   color: white;  /*Text color for each item, overrides the color property above*/
 }
+
+
+//IOS Segment
+$segment-button-ios-text-color: yellow;
+
+$segment-button-md-text-color-activated: color($colors, cinza);
+$segment-button-md-border-color-activated: color($colors, amarelo);
+$segment-button-md-border-bottom-width: 4px;
+$segment-button-md-border-bottom-color:red;
+$segment-button-md-opacity-disabled: .0;
+$segment-button-md-font-size: 1.5rem;
+
+//----
+$segment-button-ios-background-color: red;
+$segment-button-ios-background-color-activated: blue;
+$segment-button-ios-text-color:yellow;
 
 
 // App Windows Variables

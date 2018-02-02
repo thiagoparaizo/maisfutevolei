@@ -21,4 +21,13 @@ export class Usuario {
     habilidades:Habilidades = new Habilidades();
     propriedades: PropriedadesUsuario = new PropriedadesUsuario();
     
+
+    constructor(values: Object={}){
+      console.log('construtor usuario...');
+      console.log('construtor usuario...'+ JSON.stringify(values));
+      
+      Object.assign(this,values);
+    } 
+
+
   }

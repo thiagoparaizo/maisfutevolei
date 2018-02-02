@@ -1,3 +1,4 @@
+import { SearchPipe } from './../../providers/search-pipe';
 import { FiltroBusca } from './filtros-busca';
 import { UsuarioProvider } from './../../providers/usuario';
 import { Racha } from './../../objetos/racha';
@@ -15,23 +16,35 @@ import { AngularFireList } from 'angularfire2/database';
 import { Avaliacao } from '../../objetos/avaliacao';
 import { DataAcontecimento } from '../../objetos/data_acontecimento';
 import { Popover } from 'ionic-angular/components/popover/popover';
+import 'rxjs/add/operator/map';
+
 
 @Component({
   selector: 'page-busca',
   templateUrl: 'busca.html'
 })
 export class BuscaPage {
-
+  
+  searchText:string = '';
+  distancia: number = 10;
+  distanciaVisivel = false;
+  pesquisaEspecificaVisivel = false;
+  tipo_pesquisa: string = "quadras";
   public listaQuadras: Observable<any[]>;
   public listaRachas: Observable<any[]>;
   popover: Popover = null;
-  distancia: number = 0;
+  
 
   constructor(public navCtrl: NavController, private utilCrtl: UtilProvider,
     public loadingCtrl: LoadingController, public toastCtrl: ToastController,
     public quadraRachaProvider: QuadraRachaProvider, private usuarioProvider: UsuarioProvider,
     public popoverCtrl: PopoverController) {
-    
+
+      setTimeout(() => {
+        console.log('Async operation has ended');
+        this.buscarAll();
+      }, 3000);
+      
   }
 
   presentPopover(myEvent) {
@@ -50,8 +63,6 @@ export class BuscaPage {
     this.buscarAll();
     try {
       console.log('filtro estado: ' + this.quadraRachaProvider.filtrosBusca.estado);
-      console.log('filtros quadras: ' + this.quadraRachaProvider.filtrosBusca.quadras);
-      console.log('filtros rachas: ' + this.quadraRachaProvider.filtrosBusca.rachas);
       console.log('filtros acesso: ' + this.quadraRachaProvider.filtrosBusca.acesso);
     } catch (erro) {
 
@@ -67,18 +78,17 @@ export class BuscaPage {
     console.log('doPulling....');
   }
 
+  segmentChanged(evento){
+    console.log('evento: '+this.tipo_pesquisa);
+    }
+
   buscarAll() {
     console.log('buscarAll >>');
 
     if (this.quadraRachaProvider.filtrosBusca) {
-      if (this.quadraRachaProvider.filtrosBusca.quadras) {
-        this.quadraRachaProvider.listarAllQuadras(this.quadraRachaProvider.filtrosBusca.estado);
-      }
+      this.quadraRachaProvider.listarAllQuadras(this.quadraRachaProvider.filtrosBusca.estado);
+      this.quadraRachaProvider.listarAllRachas(this.quadraRachaProvider.filtrosBusca.estado);
 
-      if (this.quadraRachaProvider.filtrosBusca.rachas) {
-        this.quadraRachaProvider.listarAllRachas(this.quadraRachaProvider.filtrosBusca.estado);
-
-      }
     }else{
       console.log('inicio...');
       this.quadraRachaProvider.listarAllQuadras(null);
@@ -86,7 +96,19 @@ export class BuscaPage {
       console.log('fim...');
     }
 
+    console.log('filtrando....');
+    this.filtrarLista();
+  }
 
+  filtrarLista(){
+    console.log('>>> filtrando...' + this.searchText);
+    try {
+       
+     
+    } catch (error) {
+      console.log(error);
+    }
+    
   }
 
   addQuadra() {

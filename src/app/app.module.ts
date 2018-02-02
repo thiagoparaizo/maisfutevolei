@@ -1,3 +1,4 @@
+import { SearchPipe } from './../providers/search-pipe';
 import { environment } from './../environments/environment';
 import { SelectProvider } from './../providers/select';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -87,6 +88,7 @@ import { FiltroBusca } from '../pages/busca/filtros-busca';
     GooglePlus,
     Facebook,
     TextToSpeech,
+    SearchPipe,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
